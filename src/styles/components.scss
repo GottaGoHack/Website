@@ -1,0 +1,59 @@
+@import './mixins';
+@import './vars';
+
+button, a, h3, .clickable {
+    cursor: pointer;
+    transition: opacity .15s;
+
+    &:not(.opaque):hover {
+        opacity: .7;
+    }
+
+    &:not(.opaque):active {
+        opacity: .4;
+    }
+}
+
+.colored {
+    @include colored();
+}
+
+h1, h2 {
+    margin: 0;
+
+    font-size: 64px;
+}
+
+h1 {
+    width: 550px;
+
+    font-family: $font-suez;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+h2 {
+    @include colored(box-shadow, 0 -38px inset);
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: bold;
+
+    color: black;
+
+    margin: 0;
+
+    @include colored(box-shadow, 0 -16px inset);
+}
+
+hr {
+    width: 550px;
+    height: 2px;
+
+    margin: 30px 0 15px 0;
+
+    background-color: white;
+
+    border: none;
+}

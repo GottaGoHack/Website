@@ -1,0 +1,4 @@
+.idea/
+.svelte-kit/
+build/
+node_modules/

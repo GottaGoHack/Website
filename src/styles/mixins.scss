@@ -1,0 +1,16 @@
+@import './vars';
+
+@mixin colored($property: background-color, $suffix: null) {
+  $colors: (
+    'blue': $color-blue,
+    'yellow': $color-yellow,
+    'red': $color-red,
+    'white': white
+  );
+
+  @each $name, $color in $colors {
+    &.#{$name} {
+      #{$property}: $color $suffix;
+    }
+  }
+}
