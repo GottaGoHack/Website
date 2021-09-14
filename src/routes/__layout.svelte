@@ -2,6 +2,10 @@
     import { page } from '$app/stores';
 
     import Bottom from '/assets/bottom_logos.svg';
+    import Facebook from '/assets/socials/facebook.svg';
+    import Instagram from '/assets/socials/instagram.svg';
+    import YouTube from '/assets/socials/youtube.svg';
+    import LinkedIn from '/assets/socials/linkedin.svg';
 
     import '/app.scss';
 
@@ -10,6 +14,13 @@
         { label: 'Hackathon ?', route: '/hackathon' },
         { label: 'Archives', route: '/archives/0' }, // TODO: Combo-box
         { label: 'Contact', route: '/' } // TODO: Contact ?
+    ];
+
+    const socials = [
+        { image: Facebook, label: 'gottagohack', link: 'https://www.facebook.com/gottagohack' },
+        { image: Instagram, label: '@gotta_go_hack', link: 'https://www.instagram.com/gotta_go_hack/' },
+        { image: YouTube, label: 'Gotta Go Hack', link: 'https://www.youtube.com/channel/UCWoPWLWl-gT11wkwTxai8ZA' },
+        { image: LinkedIn, label: 'Gotta Go Hack', link: 'https://www.linkedin.com/company/gotta-go-hack/' }
     ];
 
     $: navColor = ({
@@ -53,7 +64,12 @@
             </div>
         </div>
         <div class="right">
-            <!-- TODO: Missing images -->
+            {#each socials as { image, label, link }}
+                <a class="social" href={link} target="_blank" rel="external">
+                    <img class="image" src={image} alt="Réseau social" />
+                    <div class="label">{label}</div>
+                </a>
+            {/each}
         </div>
     </div>
 </div>
@@ -164,6 +180,29 @@
                 font-weight: 300;
 
                 line-height: 42px;
+            }
+        }
+
+        .right {
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .social {
+                display: flex;
+                align-items: center;
+
+                width: 400px;
+
+                margin-bottom: 20px;
+
+                font-size: 28px;
+
+                .image {
+                    width: 55px;
+
+                    margin-right: 15px;
+                }
             }
         }
     }

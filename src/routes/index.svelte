@@ -4,7 +4,9 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
+    import Arrow from '/components/Arrow.svelte';
 
+    import Discord from '/assets/discord.svg';
     import Participants from '/assets/gauge_participants.svg';
     import Schools from '/assets/gauge_schools.svg';
 
@@ -85,8 +87,9 @@
 
             <div id="description-container">
                 <div class="description">On compte les heures avant de pouvoir vous retrouver !</div>
-                <a href="#details">
-                    <h3 id="more-info" class="red">Plus d'infos</h3> <!-- TODO: Smooth scroll -->
+                <a id="more-info" href="#details">
+                    <h3 class="label red opaque">Plus d'infos</h3>
+                    <Arrow />
                 </a>
             </div>
         </div>
@@ -132,9 +135,13 @@
             </div>
         </Shadows>
 
-        <div id="discord">
-            <!-- TODO: Missing icon -->
-        </div>
+        <a id="discord" href="https://discord.gg/yXfZpGGeqP" target="_blank" rel="external">
+            <!-- TODO: Include raw SVG ? -->
+            <img class="image" src={Discord} alt="Discord" />
+            <div class="text">
+                Viens poser toutes tes questions sur notre serveur discord !
+            </div>
+        </a>
     </div>
 </div>
 
@@ -301,11 +308,16 @@
                 }
 
                 #more-info {
+                    display: flex;
+                    flex-direction: column;
+
                     position: absolute;
                     top: 250px;
                     left: 125px;
 
-                    padding: 0 10px;
+                    .label {
+                        padding: 0 10px;
+                    }
                 }
             }
         }
@@ -334,7 +346,7 @@
         // height: 100vh;
         height: 970px;
 
-        margin-top: 50px;
+        margin-top: 25px;
         margin-bottom: 150px;
         padding: 175px 100px;
 
@@ -344,6 +356,8 @@
 
         .left {
             flex: 0.4;
+
+            padding-top: 25px;
 
             .gauge {
                 flex-direction: column;
@@ -394,7 +408,25 @@
             }
 
             #discord {
+                display: flex;
+                align-items: center;
 
+                margin-top: 60px;
+                margin-left: 25px;
+
+                .image {
+                    width: 100px;
+                }
+
+                .text {
+                    width: 550px;
+
+                    margin-left: 25px;
+
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 32px;
+                }
             }
         }
     }

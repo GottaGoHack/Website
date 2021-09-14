@@ -2,6 +2,7 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
+    import Arrow from '/components/Arrow.svelte';
 
     import Jeanne from '/assets/staff/jeanne.png';
     import Alexandre from '/assets/staff/alexandre.png';
@@ -59,7 +60,9 @@
             <div class="team-container">
                 <a href="#team">
                     <h3 class="yellow">Toute la team</h3>
-                <a/> <!-- TODO: Smooth scroll -->
+                </a>
+
+                <Arrow />
             </div>
         </div>
     </div>
@@ -136,7 +139,10 @@
             }
 
             .team-container {
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                height: 50px; // Little hack simplifying a lot
 
                 margin-top: 75px;
             }

@@ -2,6 +2,7 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
+    import Arrow from '/components/Arrow.svelte';
 
     import Cubes from '/assets/cubes.svg';
     import Cup from '/assets/cup.svg';
@@ -92,7 +93,6 @@
         }
     ];
 
-    // TODO: Juries photo
     const juries = [
         {
             photo: Jury,
@@ -150,7 +150,7 @@
                 <h3 class="red opaque">présentés</h3>
             </a>
 
-            <!-- TODO: Missing arrow -->
+            <Arrow />
         </div>
     </div>
     <div class="right">
@@ -235,7 +235,9 @@
                 flex-direction: column;
                 align-items: center;
 
-                margin-top: 175px;
+                height: 50px; // Little hack simplifying a lot
+
+                margin-top: 125px;
             }
         }
 
@@ -270,9 +272,9 @@
 
             .team {
                 width: 195px;
-                
+
                 margin-right: 25px;
-                
+
                 border-radius: 50%;
             }
 
@@ -287,6 +289,12 @@
                     font-weight: bold;
 
                     color: $color-blue;
+
+                    .cup {
+                        width: 25px;
+
+                        margin-left: 10px;
+                    }
                 }
 
                 .description {
