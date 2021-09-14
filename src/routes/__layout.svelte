@@ -1,7 +1,7 @@
 <script>
     import { page } from '$app/stores';
 
-    import Bottom from '/assets/bottom_logos.svg';
+    import Bottom from '/assets/bottom_logos.webp';
     import Facebook from '/assets/socials/facebook.svg';
     import Instagram from '/assets/socials/instagram.svg';
     import YouTube from '/assets/socials/youtube.svg';
@@ -201,7 +201,7 @@
                 .image {
                     width: 55px;
 
-                    margin-right: 15px;
+                    margin-right: 18px;
                 }
             }
         }

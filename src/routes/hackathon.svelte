@@ -3,9 +3,9 @@
 
     import Shadows from '/components/Shadows.svelte';
 
-    import Hackathon from '/assets/hackathon.png';
+    import Hackathon from '/assets/hackathon.webp';
     import Cubes from '/assets/cubes.svg';
-    import Pie from '/assets/pie.svg';
+    import Pie from '/assets/pie.webp';
 
     const steps = [
         {
@@ -51,8 +51,7 @@
 
             <img class="cubes" src={Cubes} alt="Cubes" />
 
-            <!-- TODO: Some images (like this one) has low resolution -->
-            <Shadows top="red" bottom="white" width="575" height="350" shadowWidth="300" shadowHeight="75" margin="40">
+            <Shadows top="red" bottom="white" width="575" height="383" shadowWidth="300" shadowHeight="70" margin="30">
                 <img src={Hackathon} alt="Hackathon" />
             </Shadows>
         </div>
@@ -209,6 +208,7 @@
 
         .image {
             width: 100vw;
+            max-width: 1900px;
         }
     }
 

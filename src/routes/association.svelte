@@ -4,18 +4,18 @@
     import Shadows from '/components/Shadows.svelte';
     import Arrow from '/components/Arrow.svelte';
 
-    import Jeanne from '/assets/staff/jeanne.png';
-    import Alexandre from '/assets/staff/alexandre.png';
-    import Tao from '/assets/staff/tao.png';
-    import Mehdi from '/assets/staff/mehdi.png';
-    import Victor from '/assets/staff/victor.png';
-    import Adrien from '/assets/staff/adrien.png';
-    import Sarah from '/assets/staff/sarah.png';
-    import Adele from '/assets/staff/adele.png';
-    import Ronan from '/assets/staff/ronan.png';
-    import Matthieu from '/assets/staff/matthieu.png';
-    import Quentin from '/assets/staff/quentin.png';
-    import Sixou from '/assets/staff/gros_bg.png';
+    import Jeanne from '/assets/staff/jeanne.webp';
+    import Alexandre from '/assets/staff/alexandre.webp';
+    import Tao from '/assets/staff/tao.webp';
+    import Mehdi from '/assets/staff/mehdi.webp';
+    import Victor from '/assets/staff/victor.webp';
+    import Adrien from '/assets/staff/adrien.webp';
+    import Sarah from '/assets/staff/sarah.webp';
+    import Adele from '/assets/staff/adele.webp';
+    import Ronan from '/assets/staff/ronan.webp';
+    import Matthieu from '/assets/staff/matthieu.webp';
+    import Quentin from '/assets/staff/quentin.webp';
+    import Sixou from '/assets/staff/gros_bg.webp';
 
     const members = [
         { name: 'Jeanne Morin', photo: Jeanne },

@@ -1,11 +1,12 @@
 <script>
-    import Arrow from '/assets/arrow.svg';
+    import Arrow from '/assets/arrow.svg?raw';
 </script>
 
-<img class="arrow" src={Arrow} alt="Flèce vers le bas" />
+<div class="arrow">{@html Arrow}</div>
 
 <style lang="scss">
     .arrow {
+        width: 20px;
         height: 75px;
 
         margin-top: 25px;

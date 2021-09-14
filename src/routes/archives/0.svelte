@@ -6,14 +6,14 @@
 
     import Cubes from '/assets/cubes.svg';
     import Cup from '/assets/cup.svg';
-    import PtitsSups from '/assets/teams/ptits_sups.png';
-    import Alcoolib from '/assets/teams/alcoolib.png';
-    import Harmoniks from '/assets/teams/harmoniks.png';
-    import EzTax from '/assets/teams/ez_tax.png';
-    import Zelanders from '/assets/teams/zelanders.png';
-    import TroyTeam from '/assets/teams/troy_team.png';
-    import ReunitedHackers from '/assets/teams/reunited_hackers.png';
-    import DDD from '/assets/teams/ddd.png';
+    import PtitsSups from '/assets/teams/ptits_sups.webp';
+    import Alcoolib from '/assets/teams/alcoolib.webp';
+    import Harmoniks from '/assets/teams/harmoniks.webp';
+    import EzTax from '/assets/teams/ez_tax.webp';
+    import Zelanders from '/assets/teams/zelanders.webp';
+    import TroyTeam from '/assets/teams/troy_team.webp';
+    import ReunitedHackers from '/assets/teams/reunited_hackers.webp';
+    import DDD from '/assets/teams/ddd.webp';
     import Jury from '/assets/jury.svg';
 
     const projects = [

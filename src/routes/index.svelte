@@ -136,7 +136,6 @@
         </Shadows>
 
         <a id="discord" href="https://discord.gg/yXfZpGGeqP" target="_blank" rel="external">
-            <!-- TODO: Include raw SVG ? -->
             <img class="image" src={Discord} alt="Discord" />
             <div class="text">
                 Viens poser toutes tes questions sur notre serveur discord !
@@ -310,6 +309,7 @@
                 #more-info {
                     display: flex;
                     flex-direction: column;
+                    align-items: center;
 
                     position: absolute;
                     top: 250px;
