@@ -13,7 +13,7 @@
         { label: 'L\'asso', route: '/association' },
         { label: 'Hackathon ?', route: '/hackathon' },
         { label: 'Archives', route: '/archives/0' }, // TODO: Combo-box
-        { label: 'Contact', route: '/' } // TODO: Contact ?
+        { label: 'Contact', route: '#footer' }
     ];
 
     const socials = [

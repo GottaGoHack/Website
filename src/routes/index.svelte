@@ -72,11 +72,13 @@
     <div class="left">
         <div class="container">
             <div id="countdown">
-                {#each countdown as { label, value: [first, second] }}
+                {#each countdown as { label, value: [first, second] }, i}
                     <div class="part">
                         <div class="digits">
+                            {#if i !== 0}
+                                <div class="colon">:</div>
+                            {/if}
                             <div class="digit">{first}</div>
-                            <div class="colon">:</div> <!-- TODO: Is this the right thing ? -->
                             <div class="digit">{second}</div>
                         </div>
 
@@ -258,7 +260,7 @@
                     font-size: 42px;
 
                     .digits {
-                        padding: 25px 15px;
+                        padding: 25px 0;
 
                         font-weight: 700;
 
@@ -270,6 +272,8 @@
                             width: 100px;
                             height: 180px;
 
+                            margin: 0 5px;
+
                             font-size: 96px;
 
                             background-color: white;
@@ -280,6 +284,8 @@
 
                         .colon {
                             align-items: center;
+
+                            padding: 0 10px;
                         }
                     }
 
