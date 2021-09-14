@@ -56,7 +56,7 @@
                 <h2 class="red">C'est déjà fini !</h2>
             </div>
             <div class="event-container">
-                <button class="event">Revivre l'évènement</button>
+                <a class="event" href="/archives/0" sveltekit:prefetch>Revivre l'évènement</a>
                 <div class="space"></div>
             </div>
         </div>
@@ -73,11 +73,12 @@
         <div class="container">
             <div id="countdown">
                 {#each countdown as { label, value: [first, second] }, i}
+                    {#if i !== 0}
+                        <div class="colon">:</div>
+                    {/if}
+
                     <div class="part">
                         <div class="digits">
-                            {#if i !== 0}
-                                <div class="colon">:</div>
-                            {/if}
                             <div class="digit">{first}</div>
                             <div class="digit">{second}</div>
                         </div>
@@ -249,20 +250,26 @@
             #countdown {
                 padding: 15px 25px;
 
+                font-size: 42px;
+                font-weight: 700;
+
                 background-color: #424134;
 
                 border-radius: 45px;
+
+                .colon {
+                    align-items: center;
+
+                    margin-bottom: 50px; // A bit dirty, I should rework the whole countdown as a grid instead
+                    padding: 0 10px;
+                }
 
                 .part {
                     flex: 0.33;
                     flex-direction: column;
 
-                    font-size: 42px;
-
                     .digits {
                         padding: 25px 0;
-
-                        font-weight: 700;
 
                         .digit {
                             flex-grow: 1;
@@ -280,12 +287,6 @@
                             color: black;
 
                             border-radius: 15px;
-                        }
-
-                        .colon {
-                            align-items: center;
-
-                            padding: 0 10px;
                         }
                     }
 
