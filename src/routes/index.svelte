@@ -4,10 +4,9 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
-    import Footer from '/components/Footer.svelte';
 
-    import Participants from '/assets/gauge_participants.png';
-    import Schools from '/assets/gauge_schools.png';
+    import Participants from '/assets/gauge_participants.svg';
+    import Schools from '/assets/gauge_schools.svg';
 
 
     const next = new Date(2021, 12 - 1, 3); // 0 = january, 11 = december (only months have this specificity)
@@ -138,8 +137,6 @@
         </div>
     </div>
 </div>
-
-<Footer />
 
 <style lang="scss">
     @import 'mixins';
@@ -356,12 +353,13 @@
 
                 .image {
                     margin-bottom: 15px;
+                    width: 385px;
                 }
 
                 .description {
                     max-width: 500px;
 
-                    font-size: 32px;
+                    font-size: 28px;
                     text-transform: uppercase;
                 }
             }

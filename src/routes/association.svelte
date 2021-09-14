@@ -2,7 +2,6 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
-    import Footer from '/components/Footer.svelte';
 
     import Jeanne from '/assets/staff/jeanne.png';
     import Alexandre from '/assets/staff/alexandre.png';
@@ -90,8 +89,6 @@
         {/each}
     </div>
 </div>
-
-<Footer />
 
 <style lang="scss">
     @use 'sass:math';

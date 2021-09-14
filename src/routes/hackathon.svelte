@@ -2,11 +2,10 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
-    import Footer from '/components/Footer.svelte';
 
     import Hackathon from '/assets/hackathon.png';
-    import Cubes from '/assets/cubes.png';
-    import Pie from '/assets/pie.png';
+    import Cubes from '/assets/cubes.svg';
+    import Pie from '/assets/pie.svg';
 
     const steps = [
         {
@@ -59,7 +58,7 @@
         </div>
     </div>
     <div class="right">
-        <Shadows top="blue" bottom="yellow" width="900" height="550" shadowWidth="350" shadowHeight="75" margin="25">
+        <Shadows top="blue" bottom="yellow" width="800" height="535" shadowWidth="350" shadowHeight="75" margin="25">
             <div class="title">Mais qu'est-ce que c'est quoi dis donc un Hackathon ?</div>
 
             <div class="content">
@@ -107,8 +106,6 @@
     </div>
 </div>
 
-<Footer />
-
 <style lang="scss">
     @import 'vars';
 
@@ -136,8 +133,12 @@
 
             position: relative;
 
+            margin-left: 50px;
+
             .inner {
                 flex-direction: column;
+
+                position: relative;
             }
 
             .separator {
@@ -146,10 +147,12 @@
 
             .cubes {
                 position: absolute;
-                top: 365px;
-                left: 35px;
+                top: 205px;
+                left: -120px;
 
                 z-index: 1;
+
+                width: 175px;
             }
 
             :global(.shadows) {
@@ -170,7 +173,7 @@
 
                 padding: 20px 25px;
 
-                font-size: 24px;
+                font-size: 22px;
 
                 background-color: $color-red;
             }

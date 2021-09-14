@@ -2,18 +2,18 @@
     import { title } from '/app';
 
     import Shadows from '/components/Shadows.svelte';
-    import Footer from '/components/Footer.svelte';
 
-    import Cubes from '/assets/cubes.png';
+    import Cubes from '/assets/cubes.svg';
+    import Cup from '/assets/cup.svg';
     import PtitsSups from '/assets/teams/ptits_sups.png';
     import Alcoolib from '/assets/teams/alcoolib.png';
-    // TODO: Missing 'Harmoniks' team
+    import Harmoniks from '/assets/teams/harmoniks.png';
     import EzTax from '/assets/teams/ez_tax.png';
     import Zelanders from '/assets/teams/zelanders.png';
     import TroyTeam from '/assets/teams/troy_team.png';
     import ReunitedHackers from '/assets/teams/reunited_hackers.png';
     import DDD from '/assets/teams/ddd.png';
-    import Adele from '/assets/staff/adele.png';
+    import Jury from '/assets/jury.svg';
 
     const projects = [
         {
@@ -37,7 +37,16 @@
             `
         },
         {
-            image: Alcoolib,
+            image: Harmoniks,
+            name: "Do Me A Favor - Harmoniks",
+            content: `
+                Une application web permettant de demander de l'aide entre étudiants. Elle possède un système de dettes
+                de services. Les étudiants trop endettés y ont la possibilité de repayer leur dû en effectuant des
+                services éco-respoonsables.
+            `
+        },
+        {
+            image: EzTax,
             name: "EZ-TAX - Groot",
             content: `
                 Une applicaiton web eprmettant de guider les étudiants et les jeunes adultes dans leur découvert des
@@ -86,7 +95,7 @@
     // TODO: Juries photo
     const juries = [
         {
-            photo: Adele,
+            photo: Jury,
             name: 'Lamia Derrode',
             content: `
                 Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
@@ -94,21 +103,21 @@
             `
         },
         {
-            photo: Adele,
+            photo: Jury,
             name: 'Saliha Adi Hakil',
             content: `
                 Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
                 dans le corps du texte
             `
         },{
-            photo: Adele,
+            photo: Jury,
             name: 'Loïc Blet',
             content: `
                 Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
                 dans le corps du texte
             `
         },{
-            photo: Adele,
+            photo: Jury,
             name: 'Anne Dewilde',
             content: `
                 Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
@@ -160,7 +169,7 @@
                 <div class="title">
                     {name}
                     {#if i === 0}
-                        <!-- TODO: Coupe -->
+                        <img class="cup" src={Cup} alt="1ère place" />
                     {/if}
                 </div>
                 <div class="description">{content}</div>
@@ -189,8 +198,6 @@
 </div>
 
 <div id="ribbon"></div>
-
-<Footer />
 
 <style lang="scss">
     @import "vars";
@@ -239,8 +246,10 @@
 
             .cubes {
                 position: absolute;
-                top: -50px;
+                top: -85px;
                 right: -65px;
+
+                width: 200px;
             }
         }
     }
@@ -260,7 +269,11 @@
             width: 1250px;
 
             .team {
+                width: 195px;
+                
                 margin-right: 25px;
+                
+                border-radius: 50%;
             }
 
             .content {
@@ -326,9 +339,13 @@
 
                 margin-top: 50px;
 
+                .photo {
+                    width: 150px;
+                }
+
                 .name {
                     position: absolute;
-                    top: 75px;
+                    top: 100px;
                     left: 0;
 
                     font-size: 24px;
