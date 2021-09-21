@@ -32,8 +32,8 @@
         '/': 'blue',
         '/association': 'blue',
         '/hackathon': 'red',
-        '/archives/0': 'yellow'
-    })[$page.path];
+        '/archives': 'yellow'
+    })[$page.path.match(/^\/[^\/]*/g)] || 'red';
 </script>
 
 <div id="navigation">

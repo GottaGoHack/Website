@@ -4,7 +4,7 @@ body {
     overflow-x: hidden;
 }
 
-div {
+body, div {
     display: flex;
     box-sizing: border-box;
 }

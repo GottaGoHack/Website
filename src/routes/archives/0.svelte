@@ -195,7 +195,7 @@
 <div id="ribbon"></div>
 
 <style lang="scss">
-    @import "vars";
+    @import 'vars';
 
     #header {
         height: calc(100vh - #{$nav-height});
