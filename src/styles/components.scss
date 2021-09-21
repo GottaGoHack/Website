@@ -1,9 +1,12 @@
 @import './mixins';
 @import './vars';
 
-button, a, h3, .clickable {
-    cursor: pointer;
+button, a, .clickable {
     transition: opacity .15s;
+
+    &:not(.opaque) {
+        cursor: pointer;
+    }
 
     &:not(.opaque):hover {
         opacity: .7;

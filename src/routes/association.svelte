@@ -57,13 +57,10 @@
                 </p>
             </div>
 
-            <div class="team-container">
-                <a href="#team">
-                    <h3 class="yellow">Toute la team</h3>
-                </a>
-
+            <a class="team-container" href="#team">
+                <h3 class="yellow">Toute la team</h3>
                 <Arrow />
-            </div>
+            </a>
         </div>
     </div>
     <div class="right">
@@ -84,7 +81,7 @@
     <div class="members">
         {#each members as { name, photo }, i}
             <div class="member">
-                <img class="photo" src={photo} alt={`Photo de ${name}`} />
+                <img class="photo" src={photo} alt="Photo de {name}" />
 
                 <div class="name {['red', 'blue', 'yellow'][i % 3]}">{name}</div>
                 <div class="description">Ajouter des lignes dans le corps du texte Ajouter des lignes</div> <!-- TODO: Real text -->
@@ -139,6 +136,7 @@
             }
 
             .team-container {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
 

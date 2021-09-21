@@ -141,17 +141,12 @@
             <div class="online">100% en ligne</div>
         </div>
 
-        <div class="see-projects clickable">
-            <!-- TODO: Clean this ? -->
-            <a href="#projects" class="opaque">
-                <h3 class="red opaque">Tous les projets</h3>
-            </a>
-            <a href="#projects" class="opaque">
-                <h3 class="red opaque">présentés</h3>
-            </a>
+        <a href="#projects" class="see-projects clickable">
+            <h3 class="red">Tous les projets</h3>
+            <h3 class="red">présentés</h3>
 
             <Arrow />
-        </div>
+        </a>
     </div>
     <div class="right">
         <Shadows top="blue" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="40">
@@ -164,7 +159,7 @@
 <div id="projects">
     {#each projects as { image, name, content }, i}
         <div class="project">
-            <img class="team" src={image} alt={`Logo de ${name}`} />
+            <img class="team" src={image} alt="Logo de {name}" />
             <div class="content">
                 <div class="title">
                     {name}
@@ -189,7 +184,7 @@
     <div id="juries">
         {#each juries as { photo, name, content }}
             <div class="jury">
-                <img class="photo" src={photo} alt={`Photo de ${name}`} />
+                <img class="photo" src={photo} alt="Photo de {name}" />
                 <div class="name">{name}</div>
                 <div class="content">{content}</div>
             </div>
@@ -232,6 +227,7 @@
             }
 
             .see-projects {
+                display: flex;
                 flex-direction: column;
                 align-items: center;
 
@@ -335,7 +331,7 @@
 
             padding-bottom: 20px;
 
-            color: #222; // TODO: Make this a variable ?
+            color: #222;
 
             .jury {
                 flex-direction: column;

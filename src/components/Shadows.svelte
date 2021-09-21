@@ -17,8 +17,8 @@
 </script>
 
 <div class="shadows" style={size}>
-    <div class={`shadow top ${top}`} style={`${shadowSize} ${topPosition}`}></div>
-    <div class={`shadow bottom ${bottom}`} style={`${shadowSize} ${bottomPosition}`}></div>
+    <div class="shadow top {top}" style="{shadowSize} {topPosition}"></div>
+    <div class="shadow bottom {bottom}" style="{shadowSize} {bottomPosition}"></div>
 
     <div class="shadows-content" style={size}>
         <slot />

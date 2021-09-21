@@ -91,7 +91,7 @@
             <div id="description-container">
                 <div class="description">On compte les heures avant de pouvoir vous retrouver !</div>
                 <a id="more-info" href="#details">
-                    <h3 class="label red opaque">Plus d'infos</h3>
+                    <h3 class="label red">Plus d'infos</h3>
                     <Arrow />
                 </a>
             </div>

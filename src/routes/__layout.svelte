@@ -12,7 +12,12 @@
     const routes = [
         { label: 'L\'asso', route: '/association' },
         { label: 'Hackathon ?', route: '/hackathon' },
-        { label: 'Archives', route: '/archives/0' }, // TODO: Combo-box
+        {
+            label: 'Archives',
+            subRoutes: [
+                { label: 'Hackathon #0', route: '/archives/0' }
+            ]
+        },
         { label: 'Contact', route: '#footer' }
     ];
 
@@ -35,9 +40,21 @@
     <div class="logo-container">
         <a class="logo" href="/" sveltekit:prefetch>GGH</a>
     </div>
-    <div class={`links colored ${navColor}`}>
-        {#each routes as { label, route }}
-            <a class="link" href={route} sveltekit:prefetch>{label}</a>
+    <div class="links colored {navColor}">
+        {#each routes as { label, route, subRoutes }}
+            <div class="link-container" class:has-sub={!!subRoutes}>
+                {#if route}
+                    <a class="link" href={route} sveltekit:prefetch>{label}</a>
+                {:else}
+                    <div class="link opaque">{label}</div>
+                {/if}
+
+                {#if subRoutes}
+                    {#each subRoutes as { label, route }, i}
+                        <a class="link sub index-{i + 1}" href={route} sveltekit:prefetch>{label}</a>
+                    {/each}
+                {/if}
+            </div>
         {/each}
     </div>
     <div class="space"></div>
@@ -111,28 +128,60 @@
         }
 
         .links {
-            $horizontal-padding: 60px;
+            $horizontal-padding: 35px;
 
             justify-content: space-evenly;
-            align-items: center;
 
             font-size: 18px;
             font-weight: 600;
 
-            .link {
-                display: flex;
-                align-items: center;
+            .link-container {
+                flex-direction: column;
 
-                height: 100%;
-
-                padding: 0 25px;
+                position: relative;
 
                 &:first-child {
-                    padding-left: $horizontal-padding;
+                    margin-left: $horizontal-padding;
                 }
 
                 &:last-child {
-                    padding-right: $horizontal-padding;
+                    margin-right: $horizontal-padding;
+                }
+
+                .link {
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+
+                    height: $nav-height;
+
+                    padding: 0 25px;
+
+                    &.sub {
+                        display: none;
+
+                        position: absolute;
+
+                        width: max-content;
+
+                        @for $i from 1 through 10 {
+                            &.index-#{$i} {
+                                top: $nav-height * $i;
+                            }
+                        }
+                    }
+                }
+
+                &.has-sub:hover {
+                    cursor: default;
+
+                    .link {
+                        background-color: $color-black;
+
+                        &.sub {
+                            display: flex;
+                        }
+                    }
                 }
             }
         }
