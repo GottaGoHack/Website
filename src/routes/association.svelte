@@ -18,18 +18,114 @@
     import Sixou from '/assets/staff/gros_bg.webp';
 
     const members = [
-        { name: 'Jeanne Morin', photo: Jeanne },
-        { name: 'Alexandre Lemonnier', photo: Alexandre },
-        { name: 'Tao Blancheton', photo: Tao },
-        { name: 'Mehdi Oueslati', photo: Mehdi },
-        { name: 'Victor Simonin', photo: Victor },
-        { name: 'Adrien Anton-Ludwig', photo: Adrien },
-        { name: 'Sarah Gutierrez', photo: Sarah },
-        { name: 'Adèle Pluquet', photo: Adele },
-        { name: 'Ronan Pédron', photo: Ronan },
-        { name: 'Matthieu Camart', photo: Matthieu },
-        { name: 'Quentin Abel-Marceau', photo: Quentin },
-        { name: 'Victor Sixou', photo: Sixou }
+        {
+            name: 'Jeanne Morin',
+            photo: Jeanne,
+            role: 'Bureau | Présidente',
+            description: `
+                Micro-manageuse tyrannique de la team GGH, une légende dit qu'un jour on l'aurait entendu arrêter de
+                parler (si si !). Si vous arrivez à en placer une quand elle est lancée, vous êtes très fort...
+            `
+        },
+        {
+            name: 'Alexandre Lemonnier',
+            photo: Alexandre,
+            role: 'Bureau | Trésorier',
+            description: `
+                Prêt à braquer des banques pour avoir le plus d'argent possible, Alexandre n'est expert en rien mais va
+                toujours au bout de ses idées (17km ça ne lui fait pas froid aux yeux).
+            `
+        },
+        {
+            name: 'Tao Blancheton',
+            photo: Tao,
+            role: 'Bureau | Secrétaire',
+            description: `
+                Super flexeur mais incapable d'écrire une phrase sans faute d'orthographe, Tao avait le parfait profil
+                pour devenir notre bouc émissaire à chaque coquille laissée dans un e-mail. Mairssi Taheaux <3
+            `
+        },
+        {
+            name: 'Mehdi Oueslati',
+            photo: Mehdi,
+            role: 'Bureau | Vice président',
+            description: `
+                Hackathonien récidiviste, avec des projets plus ou moins dans le thème, Mehdi est un peu notre
+                directeur artistique chez GGH. Mais surotut il offre toujours les pizzas, et ça c'est pas négligeable.
+            `
+        },
+        {
+            name: 'Victor Simonin',
+            photo: Victor,
+            role: 'Pôle com | CM LinkedIn',
+            description: `
+                De la musique, du fromage, et tout un tas de bonnes choses, tels étaient au départ les ingrédients
+                choisis pour créer le savoyard parfait. Mais le hasard ajouta un autre ingrédient : du sel !
+            `
+        },
+        {
+            name: 'Adrien Anton-Ludwig',
+            photo: Adrien,
+            role: 'Pôle recrutement jury',
+            description: `
+                Touche à tout et la main sur le coeur, Adrien, depuis sa 4L, est cfhargé de recruter les personnes
+                composant le jury de nos hackathon !
+            `
+        },
+        {
+            name: 'Sarah Gutierrez',
+            photo: Sarah,
+            role: 'Pôle com | CM Discord',
+            description: `
+                Meilleure animatrice de live Twitch depuis Michel Drucker, vous ne pourrez pas la rater dans les
+                couloirs avec sa chevelure mauve et son enceinte greffée à la main. Elle est là pour mettre l'ambiance !
+            `
+        },
+        {
+            name: 'Adèle Pluquet',
+            photo: Adele,
+            role: 'Pôle com | Designeuse',
+            description: `
+                En réunion dans le métro, dans le train ou même en plein rally 4L, notre pro de canvas est toujours en
+                pleine aventure. Mais comme on dit, tous les chemins mènent au Hackathon !
+            `
+        },
+        {
+            name: 'Ronan Pédron',
+            photo: Ronan,
+            role: 'Pôle partenariat et sponsors',
+            description: `
+                Toujours partant pour des projets délirants, vif d'esprit, Ronan est tellement rapide qu'il n'a pas eu
+                le temps d'écrire un seul mail pour la recherche de sponsor !
+            `
+        },
+        {
+            name: 'Matthieu Camart',
+            photo: Matthieu,
+            role: 'Pôle recrutement jury',
+            description: `
+                Dans le milieu, on l'appelle l'annuaire. En effet son bras est tellement long qu'il a un nombre de
+                contact inimaginable pour le commun des mortels !
+            `
+        },
+        {
+            name: 'Quentin Abel-Marceau',
+            photo: Quentin,
+            role: 'Pôle com | CM Instagram & Facebook',
+            description: `
+                Ayant toujours rêvé de devenir influenceur, Quentin n'a pas hésité à prendre les devants lors de son
+                arrivée chez GGH pour prendre le contrôle de nos réseaux !
+            `
+        },
+        {
+            name: 'Victor Sixou',
+            photo: Sixou,
+            role: 'Pôle com | Brainstormer & meme guy',
+            description: `
+                Victor (ou Susucre pour les intimes), dernier arrivant venu gonfler les rangs de GGH, est un peu notre
+                quota diversité (et oui chez GGH la diversité régionale c'est important #N'oublieJamaisD'oùTuViens).
+            `
+        }
     ];
 </script>
 
@@ -79,12 +175,13 @@
     </div>
 
     <div class="members">
-        {#each members as { name, photo }, i}
+        {#each members as { name, photo, role, description }, i}
             <div class="member">
                 <img class="photo" src={photo} alt="Photo de {name}" />
 
                 <div class="name {['red', 'blue', 'yellow'][i % 3]}">{name}</div>
-                <div class="description">Ajouter des lignes dans le corps du texte Ajouter des lignes</div> <!-- TODO: Real text -->
+                <div class="role">{role}</div>
+                <div class="description">{description}</div>
             </div>
         {/each}
     </div>
@@ -199,7 +296,7 @@
                 align-items: center;
 
                 .name {
-                    margin: 15px 0;
+                    margin-top: 15px;
 
                     font-family: $font-suez;
                     font-weight: bold;
@@ -208,10 +305,18 @@
                     @include colored(color);
                 }
 
+                .role {
+                    font-size: 14px;
+
+                    color: black;
+                }
+
                 .description {
                     width: 275px;
 
-                    font-size: 21px;
+                    margin-top: 20px;
+
+                    font-size: 20px;
                     text-align: justify;
 
                     color: black;

@@ -14,6 +14,8 @@
     import TroyTeam from '/assets/teams/troy_team.webp';
     import ReunitedHackers from '/assets/teams/reunited_hackers.webp';
     import DDD from '/assets/teams/ddd.webp';
+    import Loic from '/assets/juries/loic.webp';
+    import Anne from '/assets/juries/anne.webp';
     import Jury from '/assets/jury.svg';
 
     const projects = [
@@ -98,30 +100,26 @@
             photo: Jury,
             name: 'Lamia Derrode',
             content: `
-                Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
-                dans le corps du texte
+                Directrice du campus de Lyon de l'EIPTA.
             `
         },
         {
             photo: Jury,
             name: 'Saliha Adi Hakil',
             content: `
-                Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
-                dans le corps du texte
+                Responsable Qualité et Plan Vert et référente RGPD à l'EPITA.
             `
         },{
-            photo: Jury,
+            photo: Loic,
             name: 'Loïc Blet',
             content: `
-                Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
-                dans le corps du texte
+                Professeur d'algorithmie et de programmation à l'EPITA Lyon.
             `
         },{
-            photo: Jury,
+            photo: Anne,
             name: 'Anne Dewilde',
             content: `
-                Ajouter des lignes dans le corps du texte Ajouter des lignes dans le corps du texte Ajouter des lignes
-                dans le corps du texte
+                Directrice du laboratoire d'innovation (3IE) de l'EPITA.
             `
         }
     ];
@@ -345,6 +343,8 @@
 
                 .photo {
                     width: 150px;
+
+                    border-radius: 50%;
                 }
 
                 .name {
