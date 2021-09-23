@@ -4,8 +4,6 @@ export const app = {
     repository: 'https://github.com/Gotta-Go-Hack/website'
 };
 
-// TODO: Error page
-
 export function title(page) {
     return `${app.name} — ${page}`;
 }
