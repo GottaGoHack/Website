@@ -11,7 +11,9 @@
     import Schools from '/assets/gauge_schools.svg';
 
 
-    const next = new Date(2021, 12 - 1, 3); // 0 = january, 11 = december (only months have this specificity)
+    const nextFrom = new Date(2021, 11 - 1, 26); // 0 = january, 11 = december (only months have this specificity)
+    const nextTo = new Date(nextFrom);
+    nextTo.setDate(nextTo.getDate() + 2);
 
 
     let countdown = getCountdown();
@@ -23,7 +25,7 @@
 
     function getCountdown()
     {
-        const diff = new Date(next - new Date());
+        const diff = new Date(nextFrom - new Date());
         const toDigits = (label, value, singular) => ({
             label: label + (value > 1 && !singular ? 's' : ''),
             value: value < 10 ? [0, value] : [~~(value / 10), value % 10]
@@ -105,7 +107,7 @@
 
         <hr />
 
-        <div class="date">3 au 5 décembre</div>
+        <div class="date">{nextFrom.getDate()} au {nextTo.toLocaleString('fr', { day: 'numeric', month: 'long' })}</div>
         <div class="sub-text">100% présentiel</div>
     </div>
 </div>

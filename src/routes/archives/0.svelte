@@ -100,7 +100,7 @@
             photo: Jury,
             name: 'Lamia Derrode',
             content: `
-                Directrice du campus de Lyon de l'EIPTA.
+                Directrice du campus de Lyon de l'EPITA.
             `
         },
         {
@@ -335,8 +335,6 @@
                 flex-direction: column;
                 align-items: center;
 
-                position: relative;
-
                 width: 275px;
 
                 margin-top: 50px;
@@ -348,9 +346,7 @@
                 }
 
                 .name {
-                    position: absolute;
-                    top: 100px;
-                    left: 0;
+                    margin-top: 20px;
 
                     font-size: 24px;
                 }

@@ -136,6 +136,8 @@
             font-weight: 600;
 
             .link-container {
+                $sub-transition-duration: .1s;
+
                 flex-direction: column;
 
                 position: relative;
@@ -164,6 +166,8 @@
 
                         width: max-content;
 
+                        animation: sub-appear $sub-transition-duration forwards;
+
                         @for $i from 1 through 10 {
                             &.index-#{$i} {
                                 top: $nav-height * $i;
@@ -178,8 +182,18 @@
                     .link {
                         background-color: $color-black;
 
+                        transition: background-color $sub-transition-duration;
+
                         &.sub {
                             display: flex;
+
+                            &:hover {
+                                background-color: lighten($color-black, 6%);
+                            }
+
+                            &:active {
+                                background-color: lighten($color-black, 12%);
+                            }
                         }
                     }
                 }
@@ -278,6 +292,16 @@
             p {
                 margin: 0;
             }
+        }
+    }
+
+    @keyframes sub-appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
         }
     }
 </style>

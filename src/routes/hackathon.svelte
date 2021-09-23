@@ -33,7 +33,7 @@
             title: "C'est qui qui gagne ?",
             content: `
                 Pour les quatres équipes finalistes, c'est le moment de préparer une présentation de 15min sur tous les
-                aspects de leur projet et le ptototype réalisé.
+                aspects de leur projet et le prototype réalisé.
             `
         }
     ];

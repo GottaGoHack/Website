@@ -51,7 +51,7 @@
             role: 'Bureau | Vice président',
             description: `
                 Hackathonien récidiviste, avec des projets plus ou moins dans le thème, Mehdi est un peu notre
-                directeur artistique chez GGH. Mais surotut il offre toujours les pizzas, et ça c'est pas négligeable.
+                directeur artistique chez GGH. Mais surtout il offre toujours les pizzas, et ça c'est pas négligeable.
             `
         },
         {
@@ -68,7 +68,7 @@
             photo: Adrien,
             role: 'Pôle recrutement jury',
             description: `
-                Touche à tout et la main sur le coeur, Adrien, depuis sa 4L, est cfhargé de recruter les personnes
+                Touche à tout et la main sur le coeur, Adrien, depuis sa 4L, est chargé de recruter les personnes
                 composant le jury de nos hackathon !
             `
         },
