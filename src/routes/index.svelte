@@ -3,8 +3,8 @@
 
     import { title } from '/app';
 
-    import Shadows from '/components/Shadows.svelte';
-    import Arrow from '/components/Arrow.svelte';
+    import Shadows from '$components/Shadows.svelte';
+    import Arrow from '$components/Arrow.svelte';
 
     import Discord from '/assets/discord.svg';
     import Participants from '/assets/gauge_participants.svg';

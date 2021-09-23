@@ -1,7 +1,7 @@
 <script>
     import { title } from '/app';
 
-    import Shadows from '/components/Shadows.svelte';
+    import Shadows from '$components/Shadows.svelte';
 
     import Hackathon from '/assets/hackathon.webp';
     import Cubes from '/assets/cubes.svg';

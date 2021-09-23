@@ -1,8 +1,8 @@
 <script>
     import { title } from '/app';
 
-    import Shadows from '/components/Shadows.svelte';
-    import Arrow from '/components/Arrow.svelte';
+    import Shadows from '$components/Shadows.svelte';
+    import Arrow from '$components/Arrow.svelte';
 
     import Cubes from '/assets/cubes.svg';
     import Cup from '/assets/cup.svg';

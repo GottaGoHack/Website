@@ -1,8 +1,8 @@
 <script>
     import { title } from '/app';
 
-    import Shadows from '/components/Shadows.svelte';
-    import Arrow from '/components/Arrow.svelte';
+    import Shadows from '$components/Shadows.svelte';
+    import Arrow from '$components/Arrow.svelte';
 
     import Jeanne from '/assets/staff/jeanne.webp';
     import Alexandre from '/assets/staff/alexandre.webp';
