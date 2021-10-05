@@ -53,12 +53,12 @@
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>Hackathon Gotta Go Hack edition #0</h1>
+            <h1>Hackathon Gotta Go Hack Edition #1</h1>
             <div>
-                <h2 class="red">C'est déjà fini !</h2>
+                <h2 class="red">C'est reparti !</h2>
             </div>
             <div class="event-container">
-                <a class="event" href="/archives/0" sveltekit:prefetch>Revivre l'évènement</a>
+                <a class="event" href="https://forms.office.com/r/UcR5Xurykm" sveltekit:prefetch>Participer</a>
                 <div class="space"></div>
             </div>
         </div>
