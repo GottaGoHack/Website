@@ -58,7 +58,7 @@
                 <h2 class="red">C'est reparti !</h2>
             </div>
             <div class="event-container">
-                <a class="event" href="https://forms.office.com/r/UcR5Xurykm" sveltekit:prefetch>Participer</a>
+                <a class="event" href="https://forms.office.com/r/UcR5Xurykm" rel="external">Participer</a>
                 <div class="space"></div>
             </div>
         </div>
