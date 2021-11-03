@@ -162,7 +162,7 @@
     <div class="right">
         <Shadows top="yellow" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="40">
             <!-- TODO: Nouvelle vidéo -->
-            <iframe src="https://www.youtube.com/embed/JxOdWvtRns0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/nkuBFhYur2w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Shadows>
     </div>
 
