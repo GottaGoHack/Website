@@ -122,21 +122,19 @@
         </div>
         <div class="gauge">
             <img class="image" src={Schools} alt="Ecoles" />
-            <div class="description">Ouvert à plusieurs ecoles d'ingenieurs</div>
+            <div class="description">Ouvert à EPITA ESME SupBioTech et ESME</div>
         </div>
     </div>
     <div class="right">
         <Shadows top="blue" bottom="yellow" height="415" shadowWidth="350" shadowHeight="75" margin="25">
-            <div class="title">100% EN PRESENTIEL sur le site d'EPITA Kremlin-Bicêtre</div>
+            <div class="title">100% EN PRESENTIEL sur le site d'EPITA Kremlin-Bicêtre et EN DISTANCIEL n'importe où vous soyez !</div>
 
             <div class="content">
-                <p>La grande problématique de cette édition sera le GREEN IT.</p>
-                <p>Bien sûr le thème précis sera révélé au lancement du Hackathon ;)</p>
-                <p>
-                    [Nouveauté de l'édition] : pour les curieux qui souhaiteraient être accompagnés et découvrir les
-                    étapes de l'innovation de l'idéation à la conception en passant par le business canva, un parcours
-                    tuto sera proposé. Attention, nombre de places très limité.
-                </p>
+                <p>- Entrée gratuite,</p>
+                <p>- Un cash prize de 400 euros a la clé,</p>
+                <p>- Des workshops pour améliorer vos présentations ou vous aider a la rédaction de Business Canva (IRL et remote),</p>
+                <p>- Sur place, repas et encas fournis, salle de repos à disposition et surtout une ambiance de folie,</p>
+                <p>- Un parcours tuto pour apprendre a Hacker les Hackathons.</p>
             </div>
         </Shadows>
 
