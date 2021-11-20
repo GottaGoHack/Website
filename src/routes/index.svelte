@@ -122,7 +122,7 @@
         </div>
         <div class="gauge">
             <img class="image" src={Schools} alt="Ecoles" />
-            <div class="description">Ouvert à EPITA ESME SupBioTech et ESME</div>
+            <div class="description">Ouvert à EPITA, EPITECH, SupBioTech et ESME</div>
         </div>
     </div>
     <div class="right">
