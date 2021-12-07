@@ -15,7 +15,8 @@
         {
             label: 'Archives',
             subRoutes: [
-                { label: 'Hackathon #0', route: '/archives/0' }
+                { label: 'Hackathon #0', route: '/archives/0' },
+                { label: 'Hackathon #1', route: '/archives/1' }
             ]
         },
         { label: 'Contact', route: '#footer' }

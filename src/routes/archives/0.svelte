@@ -6,16 +6,16 @@
 
     import Cubes from '/assets/cubes.svg';
     import Cup from '/assets/cup.svg';
-    import PtitsSups from '/assets/teams/ptits_sups.webp';
-    import Alcoolib from '/assets/teams/alcoolib.webp';
-    import Harmoniks from '/assets/teams/harmoniks.webp';
-    import EzTax from '/assets/teams/ez_tax.webp';
-    import Zelanders from '/assets/teams/zelanders.webp';
-    import TroyTeam from '/assets/teams/troy_team.webp';
-    import ReunitedHackers from '/assets/teams/reunited_hackers.webp';
-    import DDD from '/assets/teams/ddd.webp';
-    import Loic from '/assets/juries/loic.webp';
-    import Anne from '/assets/juries/anne.webp';
+    import PtitsSups from '/assets/teams/0/ptits_sups.webp';
+    import Alcoolib from '/assets/teams/0/alcoolib.webp';
+    import Harmoniks from '/assets/teams/0/harmoniks.webp';
+    import EzTax from '/assets/teams/0/ez_tax.webp';
+    import Zelanders from '/assets/teams/0/zelanders.webp';
+    import TroyTeam from '/assets/teams/0/troy_team.webp';
+    import ReunitedHackers from '/assets/teams/0/reunited_hackers.webp';
+    import DDD from '/assets/teams/0/ddd.webp';
+    import Loic from '/assets/juries/0/loic.webp';
+    import Anne from '/assets/juries/0/anne.webp';
     import Jury from '/assets/jury.svg';
 
     const projects = [

@@ -55,10 +55,10 @@
         <div class="inner">
             <h1>Hackathon Gotta Go Hack Edition #1</h1>
             <div>
-                <h2 class="red">C'est reparti !</h2>
+                <h2 class="red">C'est déjà fini !</h2>
             </div>
             <div class="event-container">
-                <a class="event" href="https://forms.office.com/r/UcR5Xurykm" rel="external">Participer</a>
+                <a class="event" href="https://forms.office.com/r/UcR5Xurykm" rel="external">Revivre l'évènement</a>
                 <div class="space"></div>
             </div>
         </div>
