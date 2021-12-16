@@ -6,4 +6,5 @@ description : This is a description
 ---
 
 # {title}
-# {description}
+{date}
+{description}

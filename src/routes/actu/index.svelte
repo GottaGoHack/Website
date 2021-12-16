@@ -57,13 +57,13 @@
 
 <div id="blog">
     <div class="postGrid">
-        {#each posts as post}}
-            <div class="post">
-                <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
-                <div class="title">{post.metadata.title.substring(0, 15)}</div>
-                <div class="description">{post.metadata.description.substring(0, 80)}</div>
-                <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
-            </div>
+        {#each posts as post}
+                <div class="post">
+                    <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
+                    <div class="title">{post.metadata.title}</div>
+                    <div class="description">{post.metadata.description}</div>
+                    <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
+                </div>
         {/each}
     </div>
 </div>
@@ -105,7 +105,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 35px;
-
         padding: 35px;
 
         .post {
@@ -115,36 +114,29 @@
           .title {
             margin: 15px 0;
             padding: 0 5px;
-
             font-size: 44px;
             font-weight: bold;
             text-transform: uppercase;
-
             color: #333;
-
             box-shadow: $color-yellow 0 -28px inset;
           }
 
           .date {
             font-size: 14px;
-
             color: black;
           }
 
           .description {
-            width: 400px;
-
+            //width: 400px;
             margin-top: 20px;
-
             font-size: 20px;
             text-align: justify;
-
             color: black;
           }
           .link {
             margin-top:10px;
             font-size: 20px;
-            color: black;
+            color: $color-red;
           }
         }
       }
