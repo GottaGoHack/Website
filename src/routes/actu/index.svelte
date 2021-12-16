@@ -1,7 +1,37 @@
 <script context="module">
-    export const load = async ({ fetch }) => {
+    /*export const load = async ({ fetch }) => {
         const res = await fetch("https://jsonplaceholder.typicode.com/posts");
         const posts = await res.json();
+        return {
+            props: {
+                posts,
+            },
+        };
+    };
+
+    {#each posts as item }
+        <div class="post">
+            <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
+            <div class="title">{item.title.substring(0, 15)}</div>
+            <div class="description">{item.body.substring(0, 80)}</div>
+            <div class="link"><a sveltekit:prefetch href={`actu/${item.id}`}>Read More</a></div>
+        </div>
+    {/each}*/
+
+    const allPosts = import.meta.glob("/src/routes/actu/content/*.md");
+
+    let body=[];
+    for (let path in allPosts)
+    {
+        body.push(
+            allPosts[path]().then(({metadata}) => {
+                return {path, metadata};
+            })
+        );
+    }
+
+    export const load = async() => {
+        const posts = await Promise.all(body);
         return {
             props: {
                 posts,
@@ -19,7 +49,7 @@
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>Toute L'actu Gotta Go Hack</h1>
+            <h1>Toute L'Actu Gotta Go Hack</h1>
             <hr />
         </div>
     </div>
@@ -27,14 +57,14 @@
 
 <div id="blog">
     <div class="postGrid">
-    {#each posts as item}
-        <div class="post">
-            <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
-            <div class="title">{item.title.substring(0, 20)}</div>
-            <div class="description">{item.body.substring(0, 80)}</div>
-            <div class="link"><a sveltekit:prefetch href={`/actu/${item.id}`}>Read More</a></div>
-        </div>
-    {/each}
+        {#each posts as post}}
+            <div class="post">
+                <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
+                <div class="title">{post.metadata.title.substring(0, 15)}</div>
+                <div class="description">{post.metadata.description.substring(0, 80)}</div>
+                <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
+            </div>
+        {/each}
     </div>
 </div>
 
