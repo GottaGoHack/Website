@@ -59,7 +59,7 @@
     <div class="postGrid">
         {#each posts as post}
                 <div class="post">
-                    <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
+                    <img src={post.metadata.image} alt={post.metadata.title} width="400" height="250"/>
                     <div class="title">{post.metadata.title}</div>
                     <div class="description">{post.metadata.description}</div>
                     <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
