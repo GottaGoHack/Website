@@ -19,8 +19,9 @@
     import totallyspes from '/assets/teams/1/totallyspes.webp';
     import treeflop from '/assets/teams/1/treeflop.webp';
     import yedi from '/assets/teams/1/yedi.webp';
+    import bubble from '/assets/teams/1/bubbleteam.webp';
 
-    import bubble from '/assets/teams/1/bubbleteam.webp'
+    import GottAgro from '/assets/GottAgro.webp';
 
     import Anne from '/assets/juries/0/anne.webp';
 
@@ -204,18 +205,43 @@
             <div class="online">En présentiel à EPITA KB et partout en France</div>
         </div>
 
-        <a href="#projects" class="see-projects clickable">
-            <h3 class="red">Tous les projets</h3>
-            <h3 class="red">présentés</h3>
-
-            <Arrow />
-        </a>
     </div>
     <div class="right">
         <Shadows top="blue" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="40">
             <img class="cubes" src={Cubes} alt="Cubes" />
             <iframe src="https://www.youtube.com/embed/nkuBFhYur2w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Shadows>
+    </div>
+</div>
+
+<div id="recap">
+    <div class="lf">
+
+        <Shadows top="blue" bottom="red" width="862.5" height="574.5" shadowWidth="0" shadowHeight="0" margin="30">
+            <img src={GottAgro} alt="GottaAgro" />
+        </Shadows>
+        [La team GottAgro, vainqueur du Hackathon #1]
+    </div>
+
+    <div class="rg">
+        <div class="title">En bref</div>
+
+        <div class="description">
+            Le Hackathon winter edition #1 est notre première édition présentiel !
+            Elle a réuni une cinquantaine de participant sur le campus d'EPITA Kremlin-Bicêtre et
+            une vingtaine à distance pour une nouvelle compétition autour du thème "Planète et Alimentation".
+            Au programme, workshops, réveil aérobic et pizza mais aussi une toute nouvelle opportunité :
+            le Parcours tuto. 6 participants ont eu la chance de suivre ce programme conçu pour apprendre à Hacker un Hackathon.
+            Ainsi, ils ont suivi de nombreux workshop et réfléchis sur le thème de
+            l'"E-accessibilité".
+            Cette édition a été possible grâce au soutien de la Société Général, sponsor de l'évènement.
+        </div>
+
+        <a href="#projects" class="see-projects clickable">
+            <h3 class="red">Tous les projets</h3>
+            <h3 class="red">présentés</h3>
+            <Arrow />
+        </a>
     </div>
 </div>
 
@@ -300,6 +326,73 @@
             }
         }
     }
+
+    #recap
+    {
+      background-color: $color-yellow;
+      .lf {
+        flex: 0.5;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 10px;
+        padding-right: 25px;
+
+        :global(.shadows) {
+          margin-left: 50;
+        }
+
+        :global(.shadows-content) {
+          flex-direction: column;
+
+          padding: 20px 25px;
+
+          font-size: 22px;
+
+          background-color: $color-yellow;
+        }
+
+        .description {
+          margin-top: 50px;
+          flex-direction: column;
+          font-size: 24px;
+          width: 800px;
+        }
+
+      }
+
+      .rg {
+        flex-direction: column;
+        flex: 0.5;
+        align-items: center;
+
+        .title {
+          flex-direction: column;
+          justify-content: center;
+          font-size: 44px;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-top: 50px;
+
+        }
+        .description
+        {
+          margin-top: 50px;
+          flex-direction: column;
+          font-size: 24px;
+          width: 800px;
+        }
+        .see-projects {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 200px; // Little hack simplifying a lot
+          margin-top: 30px;
+        }
+      }
+    }
+
     #projects {
         flex-direction: column;
         align-items: center;
