@@ -60,3 +60,22 @@ hr {
 
     border: none;
 }
+hback {
+    background-color: white;
+}
+
+hcontent {
+
+    display : block;
+    margin-left: auto;
+    margin-right: auto;
+
+    flex-direction: column;
+    font-size: 20px;
+    width: 800px;
+
+    background-color: white;
+    color: $color-black;
+
+
+}

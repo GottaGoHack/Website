@@ -34,7 +34,20 @@ const config = {
         includePaths: ["src/styles"],
       },
     }),
-    mdsvex(mdsvexConfig),
+    mdsvex({
+      extensions: [".svelte.md", ".md", ".svx"],
+
+      layout: {
+        post: "/src/routes/actu/content/postlayout.svelte",
+      },
+
+      smartypants: {
+        dashes: "oldschool",
+      },
+
+      remarkPlugins: [],
+      rehypePlugins: [],
+    }),
   ],
 };
 
