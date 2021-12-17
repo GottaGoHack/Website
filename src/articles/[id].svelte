@@ -1,8 +1,30 @@
 <script context="module">
-    export const load = async ({ page, fetch }) => {
+    /*export const load = async ({ page, fetch }) => {
         const id = page.params.id;
         const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
         const post = await res.json();
+        return {
+            props: {
+                post,
+            },
+        };
+    };
+    <img src={post.metadata.image} alt={post.metadata.title} width="800" height="500" margin="40"/>*/
+
+    const Post = import.meta.glob('/src/routes/actu/content/post1.md');
+
+    let body=[];
+    for (let path in Post)
+    {
+        body.push(
+            Post[path]().then(({metadata}) => {
+                return {path, metadata};
+            })
+        );
+    }
+
+    export const load = async() => {
+        const post = await Promise.all(body);
         return {
             props: {
                 post,
@@ -15,8 +37,6 @@
     export let post;
     import { title } from '/app';
 
-    import Hackathon from '/assets/hackathon.webp';
-
 </script>
 
 <svelte:head>
@@ -25,7 +45,7 @@
 
 <div id="header">
     <div class="left">
-       <img src={Hackathon} alt="Hackathon" width="800" height="500" margin="40"/>
+
     </div>
     <div class="left">
         <div class="inner">
@@ -37,11 +57,9 @@
 
 </div>
 <div id="content">
-    <div class="since">{post.date}</div>
 
     <div class="description">
         <p>
-            {post.body}
         </p>
     </div>
 </div>

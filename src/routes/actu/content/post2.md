@@ -8,4 +8,4 @@ description : This is a description
 
 # {title}
 {date}
-{description}
+This is content for the post.

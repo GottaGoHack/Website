@@ -60,8 +60,8 @@
         {#each posts as post}
                 <div class="post">
                     <img src={post.metadata.image} alt={post.metadata.title} width="400" height="250"/>
-                    <div class="title">{post.metadata.title}</div>
-                    <div class="description">{post.metadata.description}</div>
+                    <div class="title">{post.metadata.title.substring(0,30)}</div>
+                    <div class="description">{post.metadata.description.substring(0,80)}</div>
                     <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
                 </div>
         {/each}
@@ -111,14 +111,15 @@
           flex-direction: column;
           align-items: center;
 
+
           .title {
             margin: 15px 0;
             padding: 0 5px;
-            font-size: 44px;
+            font-size: 32px;
             font-weight: bold;
             text-transform: uppercase;
             color: #333;
-            box-shadow: $color-yellow 0 -28px inset;
+            box-shadow: $color-yellow 0 -20px inset;
           }
 
           .date {
