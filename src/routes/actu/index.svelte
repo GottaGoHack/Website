@@ -57,11 +57,11 @@
 
 <div id="blog">
     <div class="postGrid">
-        {#each posts as post}
+        {#each posts.reverse() as post}
                 <div class="post">
                     <img src={post.metadata.image} alt={post.metadata.title} width="400" height="250"/>
                     <div class="title">{post.metadata.title.substring(0,30)}</div>
-                    <div class="description">{post.metadata.description.substring(0,80)}</div>
+                    <div class="description">{post.metadata.description.substring(0,200)}...</div>
                     <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
                 </div>
         {/each}
@@ -113,7 +113,7 @@
 
 
           .title {
-            margin: 15px 0;
+            padding: 15px 0;
             padding: 0 5px;
             font-size: 32px;
             font-weight: bold;
@@ -128,14 +128,14 @@
           }
 
           .description {
-            //width: 400px;
-            margin-top: 20px;
+            width: 450px;
+            padding-top: 15px;
             font-size: 20px;
             text-align: justify;
             color: black;
           }
           .link {
-            margin-top:10px;
+            padding-top:5px;
             font-size: 20px;
             color: $color-red;
           }

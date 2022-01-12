@@ -2,7 +2,6 @@
     export let title;
     export let date;
     export let image;
-    export let content;
 </script>
 
 <svelte:head>
@@ -10,7 +9,7 @@
 </svelte:head>
 
 <div id="article-header">
-    <a href="/actu">Retour aux Actu</a>
+    <a href="/actu"> == Retour aux Actu ==</a>
 </div>
 
 <div class="image">
@@ -27,10 +26,6 @@
 </slot>
 
 <style>
-
-  .container {
-    color: black;
-  }
 
   .image {
       vertical-align: baseline;
@@ -59,11 +54,6 @@
     padding-bottom: 20px;
     font-size: 20px;
 
-  }
-
-  #behind-navbar {
-    background-color: white;
-    color : black;
   }
 
 </style>
