@@ -25,11 +25,14 @@
 <slot>
 </slot>
 
-<style>
+<style lang="scss">
+
+  @import 'mixins';
+  @import 'vars';
 
   .image {
       vertical-align: baseline;
-      margin-left: 100px;
+      padding-left: 35vh;
       margin-top: 25px;
       margin-bottom: 25px;
   }
