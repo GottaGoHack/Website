@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 2
-image: ../../../src/assets/articles/GGH_staff.webp
+image: /assets/articles/GGH_staff.webp
 title: Les Bonnes Résolutions GGH 1  - Ré-organisation interne
 date: 01/01/2022
 description: Fin d’un Hackathon est synonyme de nouveau cycle chez GGH, et qui dit nouveau cycle dit changement conséquent ! Au programme, ménage de printemps et ré-organisation interne. Ce qui est génial dans cette asso c’est qu’il reste tout à construire ! explique Jeanne, Présidente de l’Association. On existe depuis moins d’un an

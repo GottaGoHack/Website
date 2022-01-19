@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 1
-image: ../../../src/assets/articles/GottAgro.webp
+image: /assets/articles/GottAgro.webp
 title: Tout savoir sur l'édition 1 !
 date: 16/12/2021
 description: On débrief ensemble le Hackathon Winter Edition 2021 qui s’est déroulé du 26 au 28 novembre dernier. Au programme ce semestre, évènement en mode hybrid, pizza et café à volonté et un petit nouveau, le Parcours Tuto !

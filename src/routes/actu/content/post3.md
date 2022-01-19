@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 3
-image: ../../../src/assets/articles/EPITA_flag.webp
+image: /assets/articles/EPITA_flag.webp
 title: Les Bonnes Résolutions GGH 2  - Implantation en région
 date: 15/12/2021
 description: Gotta Go Hack se lance sur une nouvelle problématique, l’intégration des campus EPITA en région. Depuis le début de notre aventure, rendre accessible nos évènements aux élèves lyonnais, toulousain
