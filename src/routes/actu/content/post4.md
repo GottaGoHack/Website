@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 4
-image: ../../assets/articles/manifesto.webp
+image: https://www.epita.fr/wp-content/uploads/2017/08/epita-ecole-ingenieur-intelligence-informatique-tarifs-financement.jpg
 title: Les Bonnes Résolutions GGH 3   - Notre Manifeste
 date: 03/01/2021
 description: Découvrez notre manifeste ! Après 10 mois d’existence il nous fallait prendre du recul sur nos valeurs et nos missions en tant qu’association mais aussi réfléchir au futur de Gotta Go Hack.
