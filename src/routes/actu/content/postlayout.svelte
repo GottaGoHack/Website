@@ -9,7 +9,7 @@
 </svelte:head>
 
 <div id="article-header">
-    <a href="/actu"> == Retour aux Actu ==</a>
+    <a href=""> == Retour aux Actu ==</a>
 </div>
 
 <div class="image">

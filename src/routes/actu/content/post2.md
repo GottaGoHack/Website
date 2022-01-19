@@ -1,11 +1,10 @@
 ---
 layout: post
 id: 2
-image: https://www.epita.fr/wp-content/uploads/2017/08/epita-ecole-ingenieur-intelligence-informatique-tarifs-financement.jpg
+image: https://live.staticflickr.com/65535/51786723185_038166802f_c.jpg
 title: Les Bonnes Résolutions GGH 1  - Ré-organisation interne
 date: 01/01/2022
 description: Fin d’un Hackathon est synonyme de nouveau cycle chez GGH, et qui dit nouveau cycle dit changement conséquent ! Au programme, ménage de printemps et ré-organisation interne. Ce qui est génial dans cette asso c’est qu’il reste tout à construire ! explique Jeanne, Présidente de l’Association. On existe depuis moins d’un an
-
 ---
 
 <hback>
@@ -13,14 +12,14 @@ description: Fin d’un Hackathon est synonyme de nouveau cycle chez GGH, et qui
 
 
 Fin d’un Hackathon est synonyme de nouveau cycle chez GGH, et qui dit nouveau cycle dit 
-changement conséquent ! 
+changement conséquent! 
 
-" *Ce qui est génial dans cette asso c’est qu’il reste tout à construire !* explique Jeanne,
+" *Ce qui est génial dans cette asso c’est qu’il reste tout à construire !* explique Jeanne,
  Présidente de l’Association. *On existe depuis moins d’un an mais on a déjà connu
- plusieurs cycles :  à la fin de chaque Hackathon, on remet toute notre organisation 
+ plusieurs cycles :  à la fin de chaque Hackathon, on remet toute notre organisation 
 en question car on a encore beaucoup à apprendre et à améliorer. Le fonctionnement 
 interne de l’asso est autant un espace d’essai et d’apprentissage que nos évènements, 
-c’est vraiment motivant !* "
+c’est vraiment motivant !* "
 
 Cette fin d’année 2021 a donc été l’occasion d’une remise à plat complète de notre 
 organisation et de notre vision. 
@@ -35,7 +34,7 @@ périmètres d’action, l’occasion de créer un clivage encore jamais vu chez
 
 Dorénavant nous aurons l’équipe WOODCHACK (en référence aux marmottes, Woodchuck en anglais),
  qui sera en dormance une grande partie de l’année. Cette équipe aura à sa charge la gestion
- logistique du Hackathon : préparation des locaux, gestion du matériel et des contraintes 
+ logistique du Hackathon : préparation des locaux, gestion du matériel et des contraintes 
 techniques, logistique des repas et du buffet, décorations, animations… Bref, tout le 
 travail concret à mettre en place quelques semaines avant l’évènement. 
 
