@@ -57,7 +57,7 @@
 
 <div id="blog">
     <div class="postGrid">
-        {#each posts.reverse() as post}
+        {#each posts as post}
                 <div class="post">
                     <img src={post.metadata.image} alt={post.metadata.title} width="400" height="250"/>
                     <div class="title">{post.metadata.title.substring(0,30)}</div>
