@@ -11,7 +11,7 @@
     import Schools from '/assets/gauge_schools.svg';
 
 
-    const nextFrom = new Date(2021, 11 - 1, 26); // 0 = january, 11 = december (only months have this specificity)
+    const nextFrom = new Date(2022, 4, 13); // 0 = january, 11 = december (only months have this specificity)
     const nextTo = new Date(nextFrom);
     nextTo.setDate(nextTo.getDate() + 2);
 
@@ -58,7 +58,7 @@
                 <h2 class="red">C'est déjà fini !</h2>
             </div>
             <div class="event-container">
-                <a class="event" href="https://forms.office.com/r/UcR5Xurykm" rel="external">Revivre l'évènement</a>
+                <a class="event" href="/archives/1">Revivre l'évènement</a>
                 <div class="space"></div>
             </div>
         </div>
@@ -103,7 +103,7 @@
         <div>
             <h2 class="until blue">Avant le...</h2>
         </div>
-        <h1 class="title">Hackathon Gotta Go Hack edition #1</h1>
+        <h1 class="title">Hackathon Gotta Go Hack edition #2</h1>
 
         <hr />
 
@@ -114,7 +114,7 @@
 
 <div id="details">
     <div class="left">
-        <h1>Hackathon Gotta Go Hack edition #1</h1>
+        <h1>Hackathon Gotta Go Hack edition #2</h1>
 
         <div class="gauge">
             <img class="image" src={Participants} alt="Participants" />
@@ -127,11 +127,11 @@
     </div>
     <div class="right">
         <Shadows top="blue" bottom="yellow" height="415" shadowWidth="350" shadowHeight="75" margin="25">
-            <div class="title">100% EN PRESENTIEL sur le site d'EPITA Kremlin-Bicêtre et EN DISTANCIEL n'importe où vous soyez !</div>
+            <div class="title">100% EN PRESENTIEL à EPITA Paris et Lyon et EN DISTANCIEL n'importe où dans le monde !</div>
 
             <div class="content">
                 <p>- Entrée gratuite,</p>
-                <p>- Un cash prize de 400 euros a la clé,</p>
+                <p>- Un cash prize à la clé,</p>
                 <p>- Des workshops pour améliorer vos présentations ou vous aider a la rédaction de Business Canva (IRL et remote),</p>
                 <p>- Sur place, repas et encas fournis, salle de repos à disposition et surtout une ambiance de folie,</p>
                 <p>- Un parcours tuto pour apprendre a Hacker les Hackathons.</p>

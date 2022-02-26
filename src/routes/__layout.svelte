@@ -34,7 +34,7 @@
         '/association': 'blue',
         '/hackathon': 'red',
         '/archives': 'yellow'
-    })[$page.path.match(/^\/[^\/]*/g)] || 'red';
+    })[$page.url.pathname.match(/^\/[^\/]*/g)] || 'red';
 </script>
 
 <div id="navigation">
@@ -72,7 +72,6 @@
         <div class="left">
             <div id="emails">
                 <div class="email">info{'@'}gottagohack.fr</div>
-                <div class="email">com{'@'}gottagohack.fr</div>
             </div>
 
             <div id="staff">
