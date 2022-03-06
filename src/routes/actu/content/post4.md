@@ -1,7 +1,7 @@
 ---
 layout: post
 id: 4
-image: https://drive.google.com/file/d/1qiIbka9-W7gcDpm0gQcOG9NWOvzoAyrO/view?usp=sharing
+image: https://i.ibb.co/w73cVNT/manifesto.jpg
 title: Les Bonnes Résolutions GGH 3   - Notre Manifeste
 date: 03/01/2021
 description: Découvrez notre manifeste ! Après 10 mois d’existence il nous fallait prendre du recul sur nos valeurs et nos missions en tant qu’association mais aussi réfléchir au futur de Gotta Go Hack.
