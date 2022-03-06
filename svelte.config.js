@@ -8,8 +8,10 @@ const config = {
   extensions: [".svelte", ...mdsvexConfig.extensions],
 
   kit: {
-    target: "body",
     adapter: stat(),
+    prerender: {
+        default: true
+    },
     vite: () => ({
       resolve: {
         alias: {

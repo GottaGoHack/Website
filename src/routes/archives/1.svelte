@@ -227,11 +227,11 @@
         <div class="title">En bref</div>
 
         <div class="description">
-            Le Hackathon winter edition #1 est notre première édition présentiel !
+            Le Hackathon winter edition #1 est notre première édition présentielle !
             Elle a réuni une cinquantaine de participant sur le campus d'EPITA Kremlin-Bicêtre et
             une vingtaine à distance pour une nouvelle compétition autour du thème "Planète et Alimentation".
             Au programme, workshops, réveil aérobic et pizza mais aussi une toute nouvelle opportunité :
-            le Parcours tuto. 6 participants ont eu la chance de suivre ce programme conçu pour apprendre à Hacker un Hackathon.
+            le Parcours Tuto. 6 participants ont eu la chance de suivre ce programme conçu pour apprendre à Hacker un Hackathon.
             Ainsi, ils ont suivi de nombreux workshop et réfléchis sur le thème de
             l'"E-accessibilité".
             Cette édition a été possible grâce au soutien de la Société Général, sponsor de l'évènement.
