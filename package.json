@@ -8,13 +8,13 @@
     "preview": "svelte-kit preview"
   },
   "dependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.19",
+    "@sveltejs/adapter-static": "^1.0.0-next.29",
     "normalizecss": "^3.0.0"
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
-    "sass": "^1.42.1",
-    "svelte": "^3.43.0",
-    "svelte-preprocess": "^4.9.5"
+    "sass": "^1.49.9",
+    "svelte": "^3.46.4",
+    "svelte-preprocess": "^4.10.4"
   }
 }
