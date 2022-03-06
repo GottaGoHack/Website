@@ -12,6 +12,7 @@
     const routes = [
         { label: 'L\'asso', route: '/association' },
         { label: 'Hackathon ?', route: '/hackathon' },
+        { label: 'Actu', route: '/actu' },
         {
             label: 'Archives',
             subRoutes: [
@@ -33,6 +34,7 @@
         '/': 'blue',
         '/association': 'blue',
         '/hackathon': 'red',
+        '/actu': 'blue',
         '/archives': 'yellow'
     })[$page.url.pathname.match(/^\/[^\/]*/g)] || 'red';
 </script>
