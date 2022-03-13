@@ -4,6 +4,7 @@ import { title } from '/app';
 
     import Shadows from '$components/Shadows.svelte';
     import Arrow from '$components/Arrow.svelte';
+    import Table from '$components/Table.svelte';
 
     import Pin from '/assets/pin.png';
 
@@ -469,4 +470,6 @@ import { title } from '/app';
         align-items: center;
         justify-content: center;
     }
+
+
 </style>

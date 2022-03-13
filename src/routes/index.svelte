@@ -253,7 +253,7 @@
         
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed;
+        //background-attachment: fixed;
         background-size: cover;
 
         height: 25vh;
