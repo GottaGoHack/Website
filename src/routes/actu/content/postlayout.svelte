@@ -12,15 +12,15 @@
     <a href="/actu">Retour aux Actu</a>
 </div>
 
-<div class="image">
-    <img src={image} alt={title} width="800" height="500"/>
-    <div class="title">
+<div class=header>
+    <div class="left">
+        <img src={image} alt={title}/>
+    </div>
+    <div class="right">
         {title}
         <hr />
     </div>
 </div>
-
-
 
 <slot>
 </slot>
@@ -30,25 +30,42 @@
   @import 'mixins';
   @import 'vars';
 
-  .image {
-      vertical-align: baseline;
-      padding-left: 35vh;
-      margin-top: 25px;
-      margin-bottom: 25px;
-  }
-  .title
-  {
-      padding-bottom: 25px;
-      flex-direction: column;
-      font-size: 60px;
+    .header {
+    display: grid;
 
-      margin-top: auto;
-      margin-left: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3vh;
+    grid-auto-rows: minmax(100px, auto);
 
-      width: 450px;
-      text-align: left;
-      font-family: "Suez One";
-  }
+    }
+
+    .left {
+        grid-column: 1 / 2;
+        grid-row: 1;
+
+        padding-bottom: 5vh;
+        padding-left: 10vh;
+        margin-left: 15vw;
+
+        vertical-align: baseline;
+
+        width:40vw;
+        height: 70vh;
+    }
+    .right {
+        grid-column: 2 / 2;
+        grid-row: 1;
+
+        flex-direction: column;
+
+        font-size: 5vw;
+
+        margin-top : auto;
+        padding-bottom: 5vh;
+        padding-left: 15vh;
+
+        width: 40vw;
+    }
 
   #article-header {
 

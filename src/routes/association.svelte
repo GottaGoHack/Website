@@ -1,5 +1,6 @@
 <script>
-    import { title } from '/app';
+    // @ts-ignore
+import { title } from '/app';
 
     import Shadows from '$components/Shadows.svelte';
     import Arrow from '$components/Arrow.svelte';
@@ -136,7 +137,8 @@
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>L'association Gotta Go Hack</h1>
+            <h1>L'association</h1> 
+            <h1>Gotta Go Hack</h1>
             <hr />
 
             <div class="since">Depuis février 2021</div>
@@ -144,12 +146,6 @@
             <div class="description">
                 <p>
                     Saviez-vous que l'innovation était un muscle ? Et l'entraîner c'est notre raison d'être.
-                    L'association Gotta Go Hack est là pour proposer des programmes intensifs de musculations créatives
-                    et innovantes aux élèves ingénieurs de l'EPITA depuis 2021.
-                </p>
-                <p>
-                    À travers notre évènement phare, le Hackathon, nous voulons amener les élèves à se servir de leur
-                    créativité dans un but professionnalisant, mais surtout bon-enfant !
                 </p>
             </div>
 
@@ -160,8 +156,7 @@
         </div>
     </div>
     <div class="right">
-        <Shadows top="yellow" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="40">
-            <!-- TODO: Nouvelle vidéo -->
+        <Shadows top="yellow" bottom="red" width="40" height="50" shadowWidth="20" shadowHeight="10" margin="3">
             <iframe src="https://www.youtube.com/embed/9t-jS3UU4m8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Shadows>
     </div>
@@ -177,7 +172,7 @@
     <div class="members">
         {#each members as { name, photo, role, description }, i}
             <div class="member">
-                <img class="photo" src={photo} alt="Photo de {name}" />
+                <img class="photo" src={photo} alt="Photo de {name}" height="120vh" width="auto"/>
 
                 <div class="name {['red', 'blue', 'yellow'][i % 3]}">{name}</div>
                 <div class="role">{role}</div>
@@ -208,24 +203,25 @@
         .left {
             flex-direction: column;
 
-            margin-left: 25px;
+            padding-top: 5vh;
+            padding-left: 10vw;
 
             .inner {
                 flex-direction: column;
             }
 
             .since {
-                font-size: 32px;
+                font-size: 4vh;
             }
 
             .description {
                 flex-direction: column;
 
-                width: 700px;
+                width: 40vw;
 
-                margin-top: 25px;
+                margin-top: 2vh;
 
-                font-size: 22px;
+                font-size: 3vh;
 
                 p {
                     margin: 0;
@@ -237,10 +233,14 @@
                 flex-direction: column;
                 align-items: center;
 
-                height: 50px; // Little hack simplifying a lot
+                height: 6vh; // Little hack simplifying a lot
 
-                margin-top: 75px;
+                margin-top: 5vh;
             }
+        }
+
+        .right {
+            padding-left: 4vw;
         }
 
         .corner {
@@ -263,7 +263,7 @@
     #team {
         flex-direction: column;
 
-        padding: 35px;
+        padding: 7vh;
 
         background-color: white;
 
@@ -274,22 +274,22 @@
                 margin: 15px 0;
                 padding: 0 5px;
 
-                font-size: 44px;
+                font-size: 2.5vw;
                 font-weight: bold;
                 text-transform: uppercase;
 
                 color: #333;
 
-                box-shadow: $color-yellow 0 -28px inset;
+                box-shadow: $color-yellow 0 -1.5vw inset;
             }
         }
 
         .members {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+            grid-gap: 3vw;
 
-            padding: 35px;
+            padding: 3vh;
 
             .member {
                 flex-direction: column;
@@ -300,23 +300,23 @@
 
                     font-family: $font-suez;
                     font-weight: bold;
-                    font-size: 24px;
+                    font-size: 4vh;
 
                     @include colored(color);
                 }
 
                 .role {
-                    font-size: 14px;
+                    font-size: 3vh;
 
                     color: black;
                 }
 
                 .description {
-                    width: 275px;
+                    width: 18vw;
 
-                    margin-top: 20px;
+                    margin-top: 2vh;
 
-                    font-size: 20px;
+                    font-size: 3vh;
                     text-align: justify;
 
                     color: black;

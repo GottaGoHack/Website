@@ -132,7 +132,9 @@
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>Hackathon Gotta Go Hack edition #0</h1>
+            <h1>Hackathon</h1>
+            <h1>Gotta Go Hack</h1>
+            <h1>edition #0</h1>
             <hr />
 
             <div class="date">21 - 23 Mai 2021</div>
@@ -147,7 +149,7 @@
         </a>
     </div>
     <div class="right">
-        <Shadows top="blue" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="40">
+        <Shadows top="blue" bottom="red" width="40" height="60" shadowWidth="20" shadowHeight="10" margin="3">
             <img class="cubes" src={Cubes} alt="Cubes" />
             <iframe src="https://www.youtube.com/embed/9e9MS6DhNMc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Shadows>
@@ -174,7 +176,7 @@
 <div id="jury">
     <div id="sub-header">
         <div class="inner">
-            <h1 class="title">Le jury<br /> Gotta go Hack edition #0</h1>
+            <h1 class="title">Le jury<br /> du hackathon edition #0</h1>
             <hr class="separator" />
         </div>
     </div>
@@ -182,7 +184,7 @@
     <div id="juries">
         {#each juries as { photo, name, content }}
             <div class="jury">
-                <img class="photo" src={photo} alt="Photo de {name}" />
+                <img class="photo" src={photo} alt="Photo de {name}"/>
                 <div class="name">{name}</div>
                 <div class="content">{content}</div>
             </div>
@@ -209,6 +211,8 @@
 
         .left {
             flex-direction: column;
+            padding-left: 10vw;
+            padding-top: 0vh;;
 
             .inner {
                 flex-direction: column;
@@ -216,12 +220,12 @@
 
             .date {
                 font-family: $font-suez;
-                font-size: 48px;
+                font-size: 4vw;
                 font-weight: bold;
             }
 
             .online {
-                font-size: 32px;
+                font-size: 2vw;
             }
 
             .see-projects {
@@ -229,9 +233,9 @@
                 flex-direction: column;
                 align-items: center;
 
-                height: 50px; // Little hack simplifying a lot
+                height: 6vh; // Little hack simplifying a lot
 
-                margin-top: 125px;
+                margin-top: 2vh;
             }
         }
 
@@ -242,10 +246,10 @@
 
             .cubes {
                 position: absolute;
-                top: -85px;
-                right: -65px;
+                top: -10vh;
+                right: -10vh;
 
-                width: 200px;
+                width: 10vw;
             }
         }
     }
@@ -257,42 +261,44 @@
         background-color: white;
         color: black;
 
-        padding: 25px 0;
+        padding: 2vw 0;
 
         .project {
-            margin: 50px 0;
+            padding-left: 8vw;;
+            padding-top: 10vh;
 
-            width: 1250px;
+
+            width: 80vw;
 
             .team {
-                width: 195px;
+                height : 12vw;
+                width: auto;
 
-                margin-right: 25px;
+                padding-right: 3vh;
 
                 border-radius: 50%;
             }
-
             .content {
                 flex-direction: column;
                 justify-content: center;
 
                 .title {
-                    margin-bottom: 15px;
+                    padding-bottom: 3vh;
 
-                    font-size: 28px;
+                    font-size: 2vw;
                     font-weight: bold;
 
                     color: $color-blue;
 
                     .cup {
-                        width: 25px;
+                        width: 2vw;
 
-                        margin-left: 10px;
+                        padding-left: 1vw;
                     }
                 }
 
                 .description {
-                    font-size: 18px;
+                    font-size: 1.1vw;
                     font-weight: 300;
                     text-align: justify;
                 }
@@ -314,12 +320,11 @@
                 flex-direction: column;
 
                 .title {
-                    font-size: 42px;
-                    line-height: 50px;
+                    font-size: 4vw;
                 }
 
                 .title, .separator {
-                    width: 350px;
+                    width: 30vw;
                 }
             }
         }
@@ -327,7 +332,7 @@
         #juries {
             justify-content: space-between;
 
-            padding-bottom: 20px;
+            padding-bottom: 3vh;
 
             color: #222;
 
@@ -335,28 +340,30 @@
                 flex-direction: column;
                 align-items: center;
 
-                width: 275px;
+                width: 20vw;
 
-                margin-top: 50px;
+                padding-top: 7vh;
+                padding-left: 5vh;
 
                 .photo {
-                    width: 150px;
+                    height: 13vw;
+                    width : auto;
 
                     border-radius: 50%;
                 }
 
                 .name {
-                    margin-top: 20px;
+                    margin-top: 5vh;
 
-                    font-size: 24px;
+                    font-size: 1.7vw;
                 }
 
                 .content {
-                    margin-top: 20px;
+                    margin-top: 3vh;
 
-                    font-size: 20px;
+                    font-size: 1.5vw;
                     font-weight: 300;
-                    text-align: justify;
+                    text-align: center;
                 }
             }
         }

@@ -10,10 +10,10 @@
 
     export let margin;
 
-    $: size = `width: ${width}px; height: ${height}px;`;
-    $: shadowSize = `width: ${shadowWidth}px; height: ${shadowHeight}px;`;
-    $: topPosition = `top: -${margin}px; left: -${margin}px;`
-    $: bottomPosition = `bottom: -${margin}px; right: -${margin}px;`
+    $: size = `width: ${width}vw; height: ${height}vh;`;
+    $: shadowSize = `width: ${shadowWidth}vw; height: ${shadowHeight}vh;`;
+    $: topPosition = `top: -${margin}vh; left: -${margin}vh;`
+    $: bottomPosition = `bottom: -${margin}vw; right: -${margin}vw;`
 </script>
 
 <div class="shadows" style={size}>
@@ -31,8 +31,8 @@
     .shadows {
         position: relative;
 
-        margin-left: 50px;
-        margin-right: 75px;
+        margin-left: 0vw;
+        margin-right: 15vw;
     }
 
     .shadows-content {

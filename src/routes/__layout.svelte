@@ -77,9 +77,10 @@
             </div>
 
             <div id="staff">
-                <div class="member">Présidente - Jeanne Morin : jeanne.morin@epita.fr</div>
-                <div class="member">Trésorier - Alexandre Lemonnier : alexandre.lemonnier@epita.fr</div>
-                <div class="member">Secrétaire - Tao Blancheton : tao.blancheton@epita.fr</div>
+                <div class="member">Présidente - Jeanne Morin</div>
+                <div class="member">Vice-président - Mehdi Oueslati</div>
+                <div class="member">Trésorier - Alexandre Lemonnier</div>
+                <div class="member">Secrétaire - Tao Blancheton</div>
             </div>
         </div>
         <div class="right">
@@ -96,8 +97,8 @@
 <div id="bottom">
     <img class="logos" src={Bottom} alt="Logos de Gotta Go Hack et EPITA" />
     <div class="text">
-        <p>Gotta Go Hack est une association d'EPITA, l'école d'ingénieur pour l'informatique.</p>
-        <p>Depuis 2021</p>
+        <p>Gotta Go Hack est une association des écoles EPITA & EPITECH.</p>
+        <p>Depuis février 2021</p>
     </div>
 </div>
 
@@ -281,15 +282,14 @@
         color: black;
 
         .logos {
-            height: 120px;
+            height: 3vw;
         }
 
         .text {
             flex-direction: column;
-            justify-content: center;
 
             font-weight: 300;
-            font-size: 28px;
+            font-size: 1vw;
 
             p {
                 margin: 0;
