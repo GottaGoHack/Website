@@ -51,14 +51,10 @@
 
             <img class="cubes" src={Cubes} alt="Cubes" />
 
-            <Shadows top="red" bottom="white" width="575" height="383" shadowWidth="300" shadowHeight="70" margin="30">
-                <img src={Hackathon} alt="Hackathon" />
-            </Shadows>
         </div>
     </div>
     <div class="right">
-        <Shadows top="blue" bottom="yellow" width="800" height="535" shadowWidth="350" shadowHeight="75" margin="25">
-            <div class="title">Mais qu'est-ce que c'est quoi dis donc un Hackathon ?</div>
+        <div class="title">Mais qu'est-ce que c'est quoi dis donc un Hackathon ?</div>
 
             <div class="content">
                 <p>
@@ -67,16 +63,16 @@
                     L'objectif est d'aboutir au meilleur résultat possible dans le lapse de temps accordé, en répondant
                     à des problématiques données, et tout ça évalué par des professionnels.
                 </p>
-                <p>
+            <p>
                     L'innovation est un muscle, qu'il faut entraîner ! Le but de l'Association Gotta Go Hack est donc de
                     proposer des programmes de musculation innovante aux élèves d'EPITA, notamment à travers des
                     Hackathons ! A plus long terme, le projet de l'association est d'organiser un Hackathon de référence
                     dans le paysage de la tech français et de contribuer à faire croître le nombre d'évènements de ce
                     type dans notre pays. Notre rêve : que les hackathons soient incontournables dans toutes les écoles
                     d'ingénieurs françaises d'ici 5 à 10 ans.
-                </p>
+            
+            </p>
             </div>
-        </Shadows>
     </div>
 </div>
 
@@ -120,19 +116,13 @@
             align-items: center;
         }
 
-        .left, .right {
-            flex: 0.5;
-
-            justify-content: center;
-            align-items: center;
-        }
-
-        .left {
+       .left {
             flex-direction: column;
 
             position: relative;
 
-            margin-left: 50px;
+            padding-left: 10vw;
+            padding-top: 4vh;
 
             .inner {
                 flex-direction: column;
@@ -141,17 +131,17 @@
             }
 
             .separator {
-                margin-bottom: 75px;
+                margin-bottom: 3vh;
             }
 
             .cubes {
                 position: absolute;
-                top: 205px;
-                left: -120px;
+                top: 20vh;
+                left: -10vh;
 
                 z-index: 1;
 
-                width: 175px;
+                width: 10vw;
             }
 
             :global(.shadows) {
@@ -160,35 +150,24 @@
         }
 
         .right {
-            padding-top: 50px;
-            padding-right: 25px;
-
-            :global(.shadows) {
-                margin-left: 0;
-            }
-
-            :global(.shadows-content) {
-                flex-direction: column;
-
-                padding: 20px 25px;
-
-                font-size: 22px;
-
-                background-color: $color-red;
-            }
+            padding-right: 10vw;
+            flex-direction: column;
 
             .title {
                 font-weight: bold;
                 font-style: italic;
+                font-size: 1.5vw;
+
+                padding-bottom: 2vh;
             }
 
             .content {
                 flex-direction: column;
+                font-size: 1vw;
 
 
                 p {
-                    margin: 0;
-                    margin-top: 20px;
+                    padding-top: 2vh;
 
                     .bold {
                         font-weight: bold;
@@ -231,7 +210,7 @@
                 position: absolute;
                 top: 0;
 
-                width: calc(100vw + 100px);
+                width: 100vw;
                 height: 320px;
 
                 background-color: $color-yellow;
@@ -242,9 +221,9 @@
             .percentage {
                 z-index: 1;
 
-                margin-right: 15px;
+                margin-right: 2vh;
 
-                font-size: 224px;
+                font-size: 15vw;
             }
 
             .title {
@@ -270,6 +249,7 @@
 
             .step {
                 flex-direction: column;
+                padding-left: 2vw;;
 
                 .top {
                     position: relative;
@@ -279,28 +259,28 @@
 
                         width: 100%;
 
-                        font-size: 196px;
+                        font-size: 15vw;
                         font-weight: bold;
-                        line-height: 215px;
+                        line-height: 17vw;
 
                         color: $color-blue;
                     }
 
                     .title {
                         position: absolute;
-                        top: 140px;
+                        top: 11.5vw;
                         left: 0;
 
-                        font-size: 24px;
+                        font-size: 1.7vw;
                         font-weight: bold;
                         text-transform: uppercase;
                     }
                 }
 
                 .text {
-                    width: 275px;
+                    width: 20vw;
 
-                    font-size: 18px;
+                    font-size: 1.4vw;
                     font-weight: 300;
                     text-align: justify;
                 }

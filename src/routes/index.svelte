@@ -6,9 +6,20 @@
     import Shadows from '$components/Shadows.svelte';
     import Arrow from '$components/Arrow.svelte';
 
-    import Discord from '/assets/discord.svg';
-    import Participants from '/assets/gauge_participants.svg';
-    import Schools from '/assets/gauge_schools.svg';
+    import Atelier from '/assets/home/atelier.png';
+    import Workshop from '/assets/home/workshop.png';
+    import Tuto from '/assets/home/tuto.png'
+
+    import Monde from '/assets/home/voyage.png';
+    import Paris from '/assets/home/paris.png';
+    import Pizza from '/assets/home/pizza.png';
+    import Prix from '/assets/home/sac-dargent.png'
+
+
+    import EPITA from '/assets/school/epita-logo.png';
+    import EPITECH from '/assets/school/epitech-logo.png';
+    import SUPBIO from '/assets/school/supbiotech-logo.png';
+    import ESME from '/assets/school/esme-logo.png';
 
 
     const nextFrom = new Date(2022, 4, 13); // 0 = january, 11 = december (only months have this specificity)
@@ -34,160 +45,166 @@
         return [
             toDigits('Mois', diff.getMonth(), true),
             toDigits('Jour', diff.getDate()),
-            toDigits('Heure', diff.getHours())
+            toDigits('Heure', diff.getHours()),
+            toDigits('Minute', diff.getMinutes())
         ];
     }
+
+    const first_info = [
+        {
+            title: 'PARCOURS TUTO',
+            photo: Tuto,
+            description: `
+                En parallèle de la compétition, le parcours tuto est un condensé de cours et de 
+                workshops pour apprendre à réussir en hackathon ! 
+                `
+        },
+        {
+            title: 'MAKER SPACE x GGH',
+            photo: Atelier,
+            description: `
+                L'Atelier, Maker Space de l'EPITA Paris, s'associe avec Gotta Go Hack pour proposer
+                aux participants un accès illimité à leur matériel pendant le Hackathon.`
+        },
+        {
+            title: 'WORKSHOPS',
+            photo: Workshop,
+            description: `
+                Tout au long du week-end, des workshops animés par notre staff et des intervenants sont
+                accessibles aux participants et au public.            
+                `
+        }
+    ]
+
+    const villes = [
+        {
+            title: 'Paris',
+            photo: Paris
+        },
+        {
+            title: 'Lyon',
+            photo: Monde
+        },
+        {
+            title: 'Partout en remote',
+            photo: Monde
+        }
+    ]
+
+    const bonus = [
+        {
+            title: 'Nourriture fournie',
+            photo: Pizza
+        },
+        {
+            title: 'Par équipe',
+            photo: Pizza
+        },
+        {
+            title: 'Inter-école',
+            photo: Pizza
+        }
+    ]
+
+    const school = [
+        EPITA,
+        EPITECH,
+        ESME,
+        SUPBIO
+    ]
 </script>
 
 <svelte:head>
     <title>{title('Accueil')}</title>
 </svelte:head>
 
-<div id="background">
-    <div class="part blue"></div>
-    <div class="part yellow"></div>
-    <div class="part red"></div>
-    <div class="part blue cropped"></div>
-</div>
 
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>Hackathon Gotta Go Hack Edition #1</h1>
+            <h1>Hackathon</h1>
+            <h1>Gotta Go Hack</h1> 
+            <h1>Edition #2</h1>
             <div>
-                <h2 class="red">C'est déjà fini !</h2>
+                <div class="date">13/14/15 mai 2022</div>
             </div>
             <div class="event-container">
-                <a class="event" href="/archives/1">Revivre l'évènement</a>
+                <a class="event" href="#countdown">TOUT SAVOIR</a>
                 <div class="space"></div>
             </div>
         </div>
     </div>
     <div class="right">
-        <Shadows top="yellow" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="50">
+        <Shadows top="yellow" bottom="red" width="40" height="60" shadowWidth="20" shadowHeight="10" margin="3">
             <iframe src="https://www.youtube.com/embed/nkuBFhYur2w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </Shadows>
+        </Shadows>   
     </div>
 </div>
 
-<div id="when">
-    <div class="left">
-        <div class="container">
-            <div id="countdown">
-                {#each countdown as { label, value: [first, second] }, i}
-                    {#if i !== 0}
-                        <div class="colon">:</div>
-                    {/if}
-
-                    <div class="part">
-                        <div class="digits">
-                            <div class="digit">{first}</div>
-                            <div class="digit">{second}</div>
-                        </div>
-
-                        <div class="label">{label}</div>
-                    </div>
-                {/each}
+<div id="countdown">
+    <div class="cd">
+        <div class="elements"> 
+        {#each countdown as { label, value : [ first, second ]}, i}
+        
+            <div class="element">
+            <div class="time">{first}{second}</div>
+            <div class="name">{label}</div>
             </div>
-
-            <div id="description-container">
-                <div class="description">On compte les heures avant de pouvoir vous retrouver !</div>
-                <a id="more-info" href="#details">
-                    <h3 class="label red">Plus d'infos</h3>
-                    <Arrow />
-                </a>
-            </div>
-        </div>
+        {/each}
     </div>
-    <div class="right">
-        <div>
-            <h2 class="until blue">Avant le...</h2>
-        </div>
-        <h1 class="title">Hackathon Gotta Go Hack edition #2</h1>
-
-        <hr />
-
-        <div class="date">{nextFrom.getDate()} au {nextTo.toLocaleString('fr', { day: 'numeric', month: 'long' })}</div>
-        <div class="sub-text">100% présentiel</div>
     </div>
 </div>
 
-<div id="details">
-    <div class="left">
-        <h1>Hackathon Gotta Go Hack edition #2</h1>
-
-        <div class="gauge">
-            <img class="image" src={Participants} alt="Participants" />
-            <div class="description">Jauge max 100 participants</div>
-        </div>
-        <div class="gauge">
-            <img class="image" src={Schools} alt="Ecoles" />
-            <div class="description">Ouvert à EPITA, EPITECH, SupBioTech et ESME</div>
-        </div>
-    </div>
-    <div class="right">
-        <Shadows top="blue" bottom="yellow" height="415" shadowWidth="350" shadowHeight="75" margin="25">
-            <div class="title">100% EN PRESENTIEL à EPITA Paris et Lyon et EN DISTANCIEL n'importe où dans le monde !</div>
-
-            <div class="content">
-                <p>- Entrée gratuite,</p>
-                <p>- Un cash prize à la clé,</p>
-                <p>- Des workshops pour améliorer vos présentations ou vous aider a la rédaction de Business Canva (IRL et remote),</p>
-                <p>- Sur place, repas et encas fournis, salle de repos à disposition et surtout une ambiance de folie,</p>
-                <p>- Un parcours tuto pour apprendre a Hacker les Hackathons.</p>
+<div id="alaune">
+    <div class="title">LES + DE L'EDITION</div>
+    <div class="infos">
+            {#each first_info as { title, photo, description}, i}
+            <div class="info">
+            <img class="photo" src={photo} alt=""/>
+            <div class="title">{title}</div>
+            <div class="description">{description}</div>
             </div>
-        </Shadows>
-
-        <a id="discord" href="https://discord.gg/yXfZpGGeqP" target="_blank" rel="external">
-            <img class="image" src={Discord} alt="Discord" />
-            <div class="text">
-                Viens poser toutes tes questions sur notre serveur discord !
-            </div>
-        </a>
+            {/each}
     </div>
 </div>
+
+<div id="carroussel">
+    {#each school as photo, i}
+    <div class="images">
+        <img class="photo" src={photo} alt="" height="100vh"/>
+    </div>
+    {/each}
+</div>
+
+<div class="subtitle">LES VILLES HÔTES</div>
+<div id="secondinfo">
+    <div class="infos">
+            {#each villes as { title, photo, description}, i}
+            <div class="info">
+            <img class="photo" src={photo} alt=""/>
+            <div class="subject">{title}</div>
+            </div>
+            {/each}
+    </div>
+</div>
+
+<div id="novembre">
+    <a class="flickr" href="https://www.flickr.com/photos/club-ephemere/albums/72177720295591573">La dernière édition en image</a>
+</div>
+
+<div id="faq">
+    <div class="question">Encore des questions ?</div>
+    
+    <div class="button"><a href='faq#top'>FAQ's</a></div>
+</div>
+
 
 <style lang="scss">
     @import 'mixins';
     @import 'vars';
-
-    #background {
-        position: absolute;
-        // top: -50vh;
-        top: -485px;
-        left: -50vw;
-
-        flex-direction: column;
-
-        width: 200vw;
-        // height: 200vh;
-        height: 1940px;
-
-        transform: rotate(-15deg);
-
-        z-index: -1;
-
-        .part {
-            flex-shrink: 0;
-            // height: 95vh; TODO: Back to vh ?
-            height: 920px;
-
-            @include colored();
-
-            &:first-child {
-                // height: 145vh;
-                height: 1410px;
-            }
-
-            &:last-child {
-                height: 400px;
-            }
-        }
-    }
-
     #header {
-        // height: calc(100vh - #{$nav-height});
-        height: 900px;
+        height: calc(100vh - #{$nav-height});
+        //height: 900px;
 
         .left, .right {
             flex: 0.5;
@@ -198,243 +215,295 @@
 
         .left {
             flex-direction: column;
+            padding-left: 10vw;
 
             .inner {
                 flex-direction: column;
+
+                .date {
+                    padding-top: 2vh;
+                    font-size: 3vw;
+                    @include colored(box-shadow, 0 -38px inset);
+                }
             }
 
             .event-container {
-                $border: solid white 3px;
+                
 
                 margin-top: 75px;
 
                 .event {
                     padding: 20px 25px;
 
-                    font-size: 20px;
+                    font-size: 1vw;
                     font-weight: 600;
+                    color: white;
 
-                    background: none;
-
-                    border: $border;
+                    background: $color-yellow;
                 }
 
                 .space {
                     flex-grow: 1;
-
-                    border-top: $border;
                 }
             }
         }
     }
 
-    #when {
-        // height: 100vh;
-        height: 970px;
+    #countdown{
+        background-color: white;
+        background-image: url('../assets/home/pejman.jpg');
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
 
-        .left, .right {
-            flex: 0.5;
-            flex-direction: column;
+        height: 25vh;
 
-            padding: 200px 50px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+
+        .cd {
+                .elements {
+
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-gap: 5vw;
+
+                    padding-top: 5vw;
+                    padding-bottom: 5vw;
+                    padding-left: 20vw;
+                    padding-right: 20vw;
+
+                    .element {
+                        flex-direction: column;
+                        align-items: center;                    
+
+                        .time {
+                            font-size: 6vw;
+                            line-height: 5vw;
+                            font-weight: bold;
+
+                        }
+
+                        .name {
+                            font-size:4vh;
+                        }
+                    }
+            }
         }
+    }
 
-        .left {
+    #alaune {
+        padding: 1vw;
+        padding-top: 10vh;
+
+        background-color: $color-yellow;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .title {
+            font-size: 5vw;
+            font-family: $font-barlow;
+
             justify-content: center;
             align-items: center;
 
-            .container {
+            padding-bottom: 5vh;
+        }
+
+        .infos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(25vw, 1fr));
+            
+            grid-gap: 5vh;
+
+            padding: 35px;
+            justify-content: center;
+            align-content: flex-start;
+
+            .info {
+                flex: 1;
                 flex-direction: column;
-            }
+                align-items: center;
 
-            #countdown {
-                padding: 15px 25px;
+                .photo {
+                    height: 25vw;
+                    width: auto;
 
-                font-size: 42px;
-                font-weight: 700;
-
-                background-color: #424134;
-
-                border-radius: 45px;
-
-                .colon {
-                    align-items: center;
-
-                    margin-bottom: 50px; // A bit dirty, I should rework the whole countdown as a grid instead
-                    padding: 0 10px;
                 }
 
-                .part {
-                    flex: 0.33;
-                    flex-direction: column;
+                .title {
+                    margin-top: 15px;
 
-                    .digits {
-                        padding: 25px 0;
+                    font-family: $font-barlow;
+                    font-weight: bold;
+                    font-size: 3vw;
 
-                        .digit {
-                            flex-grow: 1;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 100px;
-                            height: 180px;
-
-                            margin: 0 5px;
-
-                            font-size: 96px;
-
-                            background-color: white;
-                            color: black;
-
-                            border-radius: 15px;
-                        }
-                    }
-
-                    .label {
-                        justify-content: center;
-
-                        font-family: $font-barlow;
-                        font-weight: 500;
-                    }
+                    justify-content: center;
+                    text-align: center;
                 }
-            }
-
-            #description-container {
-                position: relative;
 
                 .description {
-                    margin-top: 35px;
-                    padding-left: 15px;
+                    width: 23vw;
 
-                    font-size: 24px;
-                    font-weight: 300;
-                    font-style: italic;
+                    margin-top: 1vh;
+
+                    font-size: 1.2vW;
+                    text-align: justify;
 
                     color: black;
                 }
-
-                #more-info {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-
-                    position: absolute;
-                    top: 250px;
-                    left: 125px;
-
-                    .label {
-                        padding: 0 10px;
-                    }
-                }
-            }
-        }
-
-        .right {
-            .until {
-                padding: 0 10px;
-            }
-
-            .title {
-                margin-top: 25px;
-            }
-
-            .date {
-                font-family: $font-suez;
-                font-size: 58px;
-            }
-
-            .sub-text {
-                font-size: 36px;
             }
         }
     }
 
-    #details {
-        // height: 100vh;
-        height: 970px;
+    #carroussel {
+        background-color: white;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
-        margin-top: 25px;
-        margin-bottom: 150px;
-        padding: 175px 100px;
 
-        .left, .right {
-            flex-direction: column;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+
+        .images {
+            display : grid;
+            grid-template-columns: repeat(auto-fit, 1fr);
+        }
+    }
+
+    .subtitle {
+            font-size: 4vw;
+            font-family: $font-barlow;
+
+            justify-content: center;
+            align-items: center;
+
+            padding-top: 15vh;
+            background-color: $color-red;
         }
 
-        .left {
-            flex: 0.4;
+    #secondinfo {
+        padding: 1vw;
+        padding-top: 10vh;
 
-            padding-top: 25px;
+        background-color: $color-red;
+        display: flex;
+        justify-content: center;
+        //flex-direction: column;
 
-            .gauge {
+        padding-bottom: 15vh;
+
+
+        .infos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(10vw, 1fr));
+            
+            grid-gap: 10vh;
+
+            justify-content: center;
+            align-content: flex-start;
+
+            .info {
+                flex: 1;
                 flex-direction: column;
-                align-items: flex-start;
-
-                margin-top: 75px;
-
-                .image {
-                    margin-bottom: 15px;
-                    width: 385px;
-                }
-
-                .description {
-                    max-width: 500px;
-
-                    font-size: 28px;
-                    text-transform: uppercase;
-                }
-            }
-        }
-
-        .right {
-            flex: 0.6;
-
-            :global(.shadows-content) {
-                flex-direction: column;
-
-                padding: 20px 25px;
-
-                font-size: 29px;
-
-                background-color: $color-red;
-            }
-
-            .title {
-                font-weight: bold;
-                font-style: italic;
-            }
-
-            .content {
-                flex-direction: column;
-
-                margin-top: 35px;
-
-                p {
-                    margin: 0;
-                }
-            }
-
-            #discord {
-                display: flex;
                 align-items: center;
 
-                margin-top: 60px;
-                margin-left: 25px;
 
-                .image {
-                    width: 100px;
+                .photo {
+                    height: 10vw;
+                    width: auto;
                 }
 
-                .text {
-                    width: 550px;
+                .subject {
+                    margin-top: 3vh;
 
-                    margin-left: 25px;
-
+                    font-family: $font-barlow;
                     font-weight: bold;
-                    font-style: italic;
-                    font-size: 32px;
+                    font-size: 2vw;
+
+                    text-align: center;
+                    justify-content: center;
+                    width: 10vw;
                 }
             }
         }
+        
     }
+
+    #novembre {
+        background-image: url('https://live.staticflickr.com/65535/51786100158_7b195b8552_c.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+        height: 100vh;
+        
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .flickr {
+            font-size : 60px;
+            color : white;
+            font-weight: bold;
+
+            font-family: $font-barlow;
+
+            text-shadow: -1px -1px 4px black;
+        }
+    }
+
+    #faq {
+        background-color: white;
+        background-size: cover;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 15vh;
+
+        .question {
+
+            padding-top: 20vh;
+            color : black;
+
+            font-size: 4vw;
+            padding-bottom: 10vh;
+
+            font-weight: bold;
+            
+
+        }
+
+        .button {
+
+            background-color: $color-blue;
+
+            color: white;
+            font-size: 4vw;
+
+            border-color: black;
+            border: 20px;
+
+            width: 20vw;
+            height: 15vh;
+
+            text-align: center;
+            justify-content: center;
+
+        }
+
+    }
+
 </style>

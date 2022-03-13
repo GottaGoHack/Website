@@ -198,7 +198,9 @@
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>Hackathon Gotta Go Hack Winter Edition #1</h1>
+            <h1>Hackathon</h1> 
+            <h1>Gotta GO Hack</h1>
+            <h1>Winter Edition #1</h1>
             <hr />
 
             <div class="date">26 - 28 Novembre 2021</div>
@@ -207,7 +209,7 @@
 
     </div>
     <div class="right">
-        <Shadows top="blue" bottom="red" width="800" height="500" shadowWidth="450" shadowHeight="100" margin="40">
+        <Shadows top="blue" bottom="red" width="40" height="60" shadowWidth="20" shadowHeight="10" margin="3">
             <img class="cubes" src={Cubes} alt="Cubes" />
             <iframe src="https://www.youtube.com/embed/nkuBFhYur2w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Shadows>
@@ -216,11 +218,8 @@
 
 <div id="recap">
     <div class="lf">
-
-        <Shadows top="blue" bottom="red" width="862.5" height="574.5" shadowWidth="0" shadowHeight="0" margin="30">
-            <img src={GottAgro} alt="GottaAgro" />
-        </Shadows>
-        [La team GottAgro, vainqueur du Hackathon #1]
+            <img class="photo" src={GottAgro} alt="GottaAgro"/>
+        <div class="description">[La team GottAgro, vainqueur du Hackathon #1]</div>
     </div>
 
     <div class="rg">
@@ -231,8 +230,7 @@
             Elle a réuni une cinquantaine de participant sur le campus d'EPITA Kremlin-Bicêtre et
             une vingtaine à distance pour une nouvelle compétition autour du thème "Planète et Alimentation".
             Au programme, workshops, réveil aérobic et pizza mais aussi une toute nouvelle opportunité :
-            le Parcours Tuto. 6 participants ont eu la chance de suivre ce programme conçu pour apprendre à Hacker un Hackathon.
-            Ainsi, ils ont suivi de nombreux workshop et réfléchis sur le thème de
+            le Parcours Tuto. 6 participants ont eu la chance de suivre ce programme hors compétition autour de
             l'"E-accessibilité".
             Cette édition a été possible grâce au soutien de la Société Général, sponsor de l'évènement.
         </div>
@@ -287,42 +285,47 @@
     @import 'vars';
     #header {
         height: calc(100vh - #{$nav-height});
+
         background-color: $color-yellow;
+
         .left, .right {
             flex: 0.5;
+
             justify-content: center;
             align-items: center;
         }
+
         .left {
             flex-direction: column;
+            padding-left: 10vw;
+            padding-top: 0vh;;
+
             .inner {
                 flex-direction: column;
             }
+
             .date {
                 font-family: $font-suez;
-                font-size: 48px;
+                font-size: 4vw;
                 font-weight: bold;
             }
+
             .online {
-                font-size: 32px;
-            }
-            .see-projects {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                height: 50px; // Little hack simplifying a lot
-                margin-top: 125px;
+                font-size: 2vw;
             }
         }
+
         .right {
             :global(.shadows-content) {
                 position: relative;
             }
+
             .cubes {
                 position: absolute;
-                top: -85px;
-                right: -65px;
-                width: 200px;
+                top: -10vh;
+                right: -10vh;
+
+                width: 10vw;
             }
         }
     }
@@ -330,34 +333,30 @@
     #recap
     {
       background-color: $color-yellow;
+
       .lf {
         flex: 0.5;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        padding-top: 10px;
-        padding-right: 25px;
+        padding-top: 10vh;
+        padding-right: 5vh;
+        padding-bottom: 20vh;
 
-        :global(.shadows) {
-          margin-left: 50;
+        width: 40vw;
+
+        .photo {
+            width : 40vw;
+            height: auto;
         }
-
-        :global(.shadows-content) {
-          flex-direction: column;
-
-          padding: 20px 25px;
-
-          font-size: 22px;
-
-          background-color: $color-yellow;
-        }
-
         .description {
-          margin-top: 50px;
+
           flex-direction: column;
-          font-size: 24px;
-          width: 800px;
+
+          font-size: 1.5vw;
+
+          
         }
 
       }
@@ -365,112 +364,161 @@
       .rg {
         flex-direction: column;
         flex: 0.5;
+
         align-items: center;
 
         .title {
           flex-direction: column;
           justify-content: center;
-          font-size: 44px;
+
+          font-size: 2vw;
           font-weight: bold;
+
           text-transform: uppercase;
-          margin-top: 50px;
+          margin-top: 5vh;
 
         }
         .description
         {
-          margin-top: 50px;
+          margin-top: 5vh;
+
           flex-direction: column;
-          font-size: 24px;
-          width: 800px;
+
+          font-size: 1.5vw;
+
+          width: 45vw;
+
+          text-align: justify;
         }
+
         .see-projects {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          height: 200px; // Little hack simplifying a lot
-          margin-top: 30px;
-        }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                height: 6vh; // Little hack simplifying a lot
+
+                margin-top: 2vh;
+                background-color: $color-yellow;
+            }
       }
     }
 
     #projects {
         flex-direction: column;
         align-items: center;
+
         background-color: white;
         color: black;
-        padding: 25px 0;
+
+        padding: 2vw 0;
+
         .project {
-            margin: 50px 0;
-            width: 1250px;
+            padding-left: 8vw;;
+            padding-top: 10vh;
+
+
+            width: 80vw;
+
             .team {
-                width: 195px;
-                margin-right: 25px;
+                height : 12vw;
+                width: auto;
+
+                padding-right: 3vh;
+
                 border-radius: 50%;
             }
             .content {
                 flex-direction: column;
                 justify-content: center;
+
                 .title {
-                    margin-bottom: 15px;
-                    font-size: 28px;
+                    padding-bottom: 3vh;
+
+                    font-size: 2vw;
                     font-weight: bold;
+
                     color: $color-blue;
+
                     .cup {
-                        width: 25px;
-                        margin-left: 10px;
+                        width: 2vw;
+
+                        padding-left: 1vw;
                     }
                 }
+
                 .description {
-                    font-size: 18px;
+                    font-size: 1.1vw;
                     font-weight: 300;
                     text-align: justify;
                 }
             }
         }
     }
+
     #jury {
         flex-direction: column;
+
         padding: 75px 125px;
+
         background-color: $color-yellow;
+
         #sub-header {
             justify-content: flex-start;
+
             .inner {
                 flex-direction: column;
+
                 .title {
-                    font-size: 42px;
-                    line-height: 50px;
+                    font-size: 4vw;
                 }
+
                 .title, .separator {
-                    width: 350px;
+                    width: 30vw;
                 }
             }
         }
+
         #juries {
             justify-content: space-between;
-            padding-bottom: 20px;
+
+            padding-bottom: 3vh;
+
             color: #222;
+
             .jury {
                 flex-direction: column;
                 align-items: center;
-                width: 275px;
-                margin-top: 50px;
+
+                width: 20vw;
+
+                padding-top: 7vh;
+                padding-left: 5vh;
+
                 .photo {
-                    width: 150px;
+                    height: 13vw;
+                    width : auto;
+
                     border-radius: 50%;
                 }
+
                 .name {
-                    margin-top: 20px;
-                    font-size: 24px;
+                    margin-top: 5vh;
+
+                    font-size: 1.7vw;
                 }
+
                 .content {
-                    margin-top: 20px;
-                    font-size: 20px;
+                    margin-top: 3vh;
+
+                    font-size: 1.5vw;
                     font-weight: 300;
-                    text-align: justify;
+                    text-align: center;
                 }
             }
         }
     }
+
     #ribbon {
         width: calc(100vw + 50px);
         height: 60px;

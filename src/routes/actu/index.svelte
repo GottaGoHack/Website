@@ -1,22 +1,6 @@
 <script context="module">
-    /*export const load = async ({ fetch }) => {
-        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-        const posts = await res.json();
-        return {
-            props: {
-                posts,
-            },
-        };
-    };
 
-    {#each posts as item }
-        <div class="post">
-            <img src={Hackathon} alt="Hackathon" width="400" height="250"/>
-            <div class="title">{item.title.substring(0, 15)}</div>
-            <div class="description">{item.body.substring(0, 80)}</div>
-            <div class="link"><a sveltekit:prefetch href={`actu/${item.id}`}>Read More</a></div>
-        </div>
-    {/each}*/
+  import { title } from '/app';
 
     const allPosts = import.meta.glob("/src/routes/actu/content/*.md");
 
@@ -46,10 +30,15 @@
     import Hackathon from '/assets/hackathon.webp';
 </script>
 
+<svelte:head>
+    <title>{title('Actu')}</title>
+</svelte:head>
+
 <div id="header">
     <div class="left">
         <div class="inner">
-            <h1>Toute L'Actu Gotta Go Hack</h1>
+            <h1>Toute L'Actu</h1> 
+            <h1>Gotta Go Hack</h1>
             <hr />
         </div>
     </div>
@@ -59,8 +48,8 @@
     <div class="postGrid">
         {#each posts.reverse() as post}
                 <div class="post">
-                    <img src={post.metadata.image} alt={post.metadata.title} width="400" height="250"/>
-                    <div class="title">{post.metadata.title.substring(0,30)}</div>
+                    <a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}><img src={post.metadata.image} alt={post.metadata.title} width="400vw" height="250vh"/></a>
+                    <div class="title"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>{post.metadata.title.substring(0,30)}</a></div>
                     <div class="description">{post.metadata.description.substring(0,200)}...</div>
                     <div class="link"><a sveltekit:prefetch href={`actu/content/post${post.metadata.id}`}>Read More</a></div>
                 </div>
@@ -84,9 +73,9 @@
       align-items: center;
       flex-direction: column;
 
-      margin-left: 25px;
-      margin-top: 50px;
-      margin-bottom: 25px;
+      margin-left: 8vw;
+      margin-top: 10vh;
+      margin-bottom: 5vh;
 
       .inner {
         flex-direction: column;
@@ -98,14 +87,16 @@
     #blog {
 
       flex-direction: column;
-      padding: 35px;
+      padding-left: 2.5vw;
+      padding-right: 2.5vw;
+      padding-top: 7vh;
+      padding-bottom: 7vh;
       background-color: white;
 
       .postGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 35px;
-        padding: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-gap: 2vw;
 
         .post {
           flex-direction: column;
@@ -113,13 +104,11 @@
 
 
           .title {
-            padding: 15px 0;
-            padding: 0 5px;
-            font-size: 32px;
+            font-size: 2vw;
             font-weight: bold;
             text-transform: uppercase;
             color: #333;
-            box-shadow: $color-yellow 0 -20px inset;
+            box-shadow: $color-yellow 0 -1.3vw inset;
           }
 
           .date {
@@ -128,18 +117,28 @@
           }
 
           .description {
-            width: 450px;
-            padding-top: 15px;
-            font-size: 20px;
+            width: 35vw;
+            padding-top: 4vh;
+            font-size: 1.5vw;
             text-align: justify;
             color: black;
           }
           .link {
-            padding-top:5px;
-            font-size: 20px;
+            padding-top:1vh;
+            font-size: 1.5vw;
             color: $color-red;
           }
         }
       }
+    }
+
+    @keyframes sub-appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 </style>

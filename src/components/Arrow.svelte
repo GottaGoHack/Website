@@ -6,9 +6,9 @@
 
 <style lang="scss">
     .arrow {
-        width: 20px;
-        height: 75px;
+        width: 3vw;
+        height: 10vh;
 
-        margin-top: 25px;
+        margin-top: 4vh;
     }
 </style>
