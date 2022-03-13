@@ -263,6 +263,8 @@ import { title } from '/app';
     <a href="https://forms.office.com/r/FedcuQtKNt">Nous rejoindre</a>
 </div>
 
+<div id="ribbon"></div>
+
 <style lang="scss">
     @use 'sass:math';
 
@@ -469,6 +471,17 @@ import { title } from '/app';
 
         align-items: center;
         justify-content: center;
+
+        padding-bottom: 20vh;
+    }
+
+    #ribbon {
+        width: calc(100vw + 50px);
+        height: 60px;
+
+        background-color: $color-yellow;
+
+        transform: rotate(-1.5deg) translate(-10px, -30px);
     }
 
 

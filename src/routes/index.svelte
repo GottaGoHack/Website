@@ -348,8 +348,6 @@
                 .description {
                     width: 23vw;
 
-                    margin-top: 1vh;
-
                     font-size: 1.2vW;
                     text-align: justify;
 
@@ -462,6 +460,31 @@
         }
     }
 
+    #team {
+        flex-direction: column;
+
+        padding: 7vh;
+
+        background-color: white;
+
+        .title-container {
+            justify-content: center;
+
+            .title {
+                margin: 15px 0;
+                padding: 0 5px;
+
+                font-size: 2.5vw;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                color: #333;
+
+                box-shadow: $color-yellow 0 -1.5vw inset;
+            }
+        }
+    }
+
     #faq {
         background-color: white;
         background-size: cover;
@@ -472,37 +495,36 @@
         align-items: center;
 
         padding-bottom: 15vh;
+        padding-top: 20vh;
 
         .question {
 
-            padding-top: 20vh;
-            color : black;
+            color : $color-black;
 
             font-size: 4vw;
-            padding-bottom: 10vh;
-
+            
             font-weight: bold;
 
             font-family: $font-barlow;
-            
+            box-shadow: $color-yellow 0 -2vw inset;
 
         }
 
         .button {
 
+            margin-top: 10vh;
             background-color: $color-blue;
 
             color: white;
             font-size: 4vw;
-
-            border-color: black;
-            border: 20px;
 
             width: 20vw;
             height: 15vh;
 
             text-align: center;
             justify-content: center;
+
+            
 
         }
 
