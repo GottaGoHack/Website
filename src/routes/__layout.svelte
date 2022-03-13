@@ -1,7 +1,9 @@
 <script>
     import { page } from '$app/stores';
 
-    import Bottom from '/assets/bottom_logos.webp';
+    import GGH from '/assets/logo.svg';
+    import EPITA from '/assets/school/epita-logo.png';
+    import EPITECH from '/assets/school/epitech-logo.png';
     import Facebook from '/assets/socials/facebook.svg';
     import Instagram from '/assets/socials/instagram.svg';
     import YouTube from '/assets/socials/youtube.svg';
@@ -29,6 +31,12 @@
         { image: YouTube, label: 'Gotta Go Hack', link: 'https://www.youtube.com/channel/UCWoPWLWl-gT11wkwTxai8ZA' },
         { image: LinkedIn, label: 'Gotta Go Hack', link: 'https://www.linkedin.com/company/gotta-go-hack/' }
     ];
+
+    const bottom = [
+        { image: GGH, label: 'gottagohack', link: 'https://www.linktr.ee/GottaGoHack' },
+        { image: EPITA, label: 'epita', link: 'https://www.epita.fr' },
+        { image: EPITECH, label: 'epitech', link: 'https://www.epitech.eu' },     
+    ]
 
     $: navColor = ({
         '/': 'blue',
@@ -94,11 +102,19 @@
     </div>
 </div>
 
+
 <div id="bottom">
-    <img class="logos" src={Bottom} alt="Logos de Gotta Go Hack et EPITA" />
+    <div class="logos">
+    {#each bottom as {image, label, link}}     
+            <a class="logo" href={link} target="_blank" rel="external">
+                <img class="image" src={image} alt={label} height="50vh">
+            </a>
+    {/each}
+    </div>
+
     <div class="text">
         <p>Gotta Go Hack est une association des écoles EPITA & EPITECH.</p>
-        <p>Depuis février 2021</p>
+        <p>Crédits Photo : Association <a href="https://ephemere.photo/#">Ephemere</a></p>
     </div>
 </div>
 
@@ -274,15 +290,25 @@
     }
 
     #bottom {
-        justify-content: space-evenly;
-
-        padding: 25px 0;
-
         background-color: white;
         color: black;
 
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 1vh 1vh;
+
         .logos {
-            height: 3vw;
+            padding-left: 2px;
+
+            display : grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 2vh;
+
+            justify-content: right;
+            .logo {
+
+                
+            }
         }
 
         .text {
@@ -291,6 +317,9 @@
             font-weight: 300;
             font-size: 1vw;
 
+            justify-content: center;
+
+            padding-left: 5vh;
             p {
                 margin: 0;
             }

@@ -172,7 +172,7 @@
 <div id="carroussel">
     {#each school as photo, i}
     <div class="images">
-        <img class="photo" src={photo} alt="" height="100vh"/>
+        <img class="photo" src={photo} alt="" height="60vw"/>
     </div>
     {/each}
 </div>
@@ -362,7 +362,6 @@
     #carroussel {
         background-color: white;
         flex-direction: row;
-        align-items: center;
         justify-content: center;
 
 
@@ -371,9 +370,15 @@
         padding-top: 5vh;
         padding-bottom: 5vh;
 
+        display : grid;
+        grid-template-columns: auto auto auto auto;
+
         .images {
-            display : grid;
-            grid-template-columns: repeat(auto-fit, 1fr);
+            height: 3vw;
+            justify-content: center;
+            align-items: center;
+
+            padding: 5px;
         }
     }
 
@@ -395,7 +400,6 @@
         background-color: $color-red;
         display: flex;
         justify-content: center;
-        //flex-direction: column;
 
         padding-bottom: 15vh;
 
