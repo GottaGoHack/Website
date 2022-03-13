@@ -12,6 +12,7 @@
 
     import Monde from '/assets/home/voyage.png';
     import Paris from '/assets/home/paris.png';
+    import Lyon from '/assets/home/lion.png';
     import Pizza from '/assets/home/pizza.png';
     import Prix from '/assets/home/sac-dargent.png'
 
@@ -83,7 +84,7 @@
         },
         {
             title: 'Lyon',
-            photo: Monde
+            photo: Lyon
         },
         {
             title: 'Partout en remote',
@@ -189,11 +190,11 @@
 </div>
 
 <div id="novembre">
-    <a class="flickr" href="https://www.flickr.com/photos/club-ephemere/albums/72177720295591573">La dernière édition en image</a>
+    <a class="flickr" href="https://www.flickr.com/photos/club-ephemere/albums/72177720295591573">LA DERNIERE EDITION EN IMAGE</a>
 </div>
 
 <div id="faq">
-    <div class="question">Encore des questions ?</div>
+    <div class="question">ENCORE DES QUESTIONS ?</div>
     
     <div class="button"><a href='faq#top'>FAQ's</a></div>
 </div>
@@ -228,22 +229,19 @@
             }
 
             .event-container {
-                
-
-                margin-top: 75px;
+                $border: solid white 3px;
+                margin-top: 15vh;
 
                 .event {
                     padding: 20px 25px;
-
-                    font-size: 1vw;
+                    font-size: 1.5vw;
                     font-weight: 600;
-                    color: white;
-
-                    background: $color-yellow;
+                    background: none;
+                    border: $border;
                 }
-
                 .space {
-                    flex-grow: 1;
+                    border-top: $border;
+                    width: 20vw;
                 }
             }
         }
@@ -456,8 +454,6 @@
             color : white;
             font-weight: bold;
 
-            font-family: $font-barlow;
-
             text-shadow: -1px -1px 4px black;
         }
     }
@@ -482,6 +478,8 @@
             padding-bottom: 10vh;
 
             font-weight: bold;
+
+            font-family: $font-barlow;
             
 
         }

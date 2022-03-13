@@ -77,10 +77,10 @@
             </div>
 
             <div id="staff">
-                <div class="member">Présidente - Jeanne Morin : jeanne.morin@epita.fr</div>
-                <div class="member">Vice-président - Mehdi Oueslati : mehdi.oueslati@epita.fr</div>
-                <div class="member">Trésorier - Alexandre Lemonnier : alexandre.lemonnier@epita.fr</div>
-                <div class="member">Secrétaire - Tao Blancheton : tao.blancheton@epita.fr</div>
+                <div class="member">Présidente - Jeanne Morin</div>
+                <div class="member">Vice-président - Mehdi Oueslati</div>
+                <div class="member">Trésorier - Alexandre Lemonnier</div>
+                <div class="member">Secrétaire - Tao Blancheton</div>
             </div>
         </div>
         <div class="right">
