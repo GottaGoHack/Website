@@ -41,11 +41,11 @@
         },
         {
             question: 'Qui peut s\'inscrire ?',
-            answer: 'Les élèves de tous niveaux de l\'EPITA, l\'EPITECH, l\'ESME et de SupbioTech peuvent s\'inscrire au Hackathon.'
+            answer: 'Les étudiants de toutes écoles peuvent s\'inscrire au Hackathon.'
         },
         {
             question: 'Combien coûte l\'inscription ?',
-            answer: 'Rien. 0. Nada. Lors de l\'inscription seule une caution sera demandé. Cette dernière sera rendu si le participant se rend bien au Hackathon.'
+            answer: 'Pour les élèves du groupe IONIS, Lors de l\'inscription seule une caution sera demandé. Cette dernière sera rendu si le participant se rend bien au Hackathon.'
         },
         {
             question: 'Comment s\'inscrire en équipe au Hackathon ?',
@@ -90,7 +90,6 @@
 <div id="header">FAQ</div>
 
 <div class="categories">GENERAL</div>
-
 <div class="list">
     {#each general_question as { q, a }, i}
         <div class="question"><Question question={general_question[i].question} answer={general_question[i].answer}/></div>
@@ -98,7 +97,6 @@
 </div>
 
 <div class="categories">INSCRIPTION</div>
-
 <div class="list">
     {#each inscription_question as { q, a }, i}
         <div class="question"><Question question={inscription_question[i].question} answer={inscription_question[i].answer}/></div>
@@ -106,7 +104,6 @@
 </div>
 
 <div class="categories">PARTICIPANT</div>
-
 <div class="list">
     {#each participant_question as { q, a }, i}
         <div class="question"><Question question={participant_question[i].question} answer={participant_question[i].answer}/></div>
