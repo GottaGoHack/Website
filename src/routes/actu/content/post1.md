@@ -67,7 +67,7 @@ Banking, envoyé par notre partenaire, la Société Générale.
 
 
 4 projets ont pu atteindre la finale de cette winter édition 2021 :
-- PREMIER POSITION : **Laids Fruit & Légume - GottAgro **   
+- PREMIER POSITION : **Laids Fruit & Légume - GottAgro**   
 Une plateforme qui permet de mettre en relation les agriculteurs et les consommateurs pour écouler  les stocks de fruits et légumes impropres à la 
 distribution du fait de leur esthétiques. 35% des récoltes  chaque année sont laissés de côté car les fruits et légumes sont jugés trop laids.
 
