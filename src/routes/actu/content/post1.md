@@ -67,19 +67,19 @@ Banking, envoyé par notre partenaire, la Société Générale.
 
 
 4 projets ont pu atteindre la finale de cette winter édition 2021 :
-- PREMIER POSITION : Laids Fruit & Légume - GottAgro 
+- PREMIER POSITION : **Laids Fruit & Légume - GottAgro **   
 Une plateforme qui permet de mettre en relation les agriculteurs et les consommateurs pour écouler  les stocks de fruits et légumes impropres à la 
 distribution du fait de leur esthétiques. 35% des récoltes  chaque année sont laissés de côté car les fruits et légumes sont jugés trop laids.
 
-- DEUXIEME POSITION : La BoboBox - TreeFlop
+- DEUXIEME POSITION : **La BoboBox - TreeFlop**   
 Un projet de jardinière connectée à destination des toits de bâtiment d'entreprise et d'école. L'équipe TreeFlop nous propose ici la nature 2.0 : 
 on plante, et on cueille lorsque c'est mûr ! La BoboBox s'occupe du reste.
 
-- TROISIEME POSITION : AssoGrow - Jacques Houzit
+- TROISIEME POSITION : **AssoGrow - Jacques Houzit**   
 Un logiciel à destination de la Banque Alimentaire, pour les aider à centraliser les demande d'aide faites par des bénéficaires, les possibilités 
 d'aide proposées par chacun de leurs partenaires et les quantités d'offre qu'ils peuvent encore fournir.
 
-- QUATRIEME POSITION : Restauck - Les Immortels
+- QUATRIEME POSITION : **Restauck - Les Immortels**    
 Une application web permettant aux restaurants et aux commerces de proximité de prédire les stocks nécessaires dans les prochaines semaines. L'analyse se 
 base sur les données du commerçant ainsi qu'un questionnaire de feedback client qui leur permet d'annoncer au magasin quels produits les intéressent à 
 quelle période.
