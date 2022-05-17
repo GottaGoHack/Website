@@ -4,32 +4,30 @@
     import Arrow from '$components/Arrow.svelte';
     import Cubes from '/assets/cubes.svg';
     import Cup from '/assets/cup.svg';
-    import lfl from '/assets/teams/1/lfl.webp';
-    import foodcycle from '/assets/teams/1/foodcycle.webp';
-    import assogrow from '/assets/teams/1/assogrow.webp';
-    import croposphere from '/assets/teams/1/croposphere.webp';
-    import dokini from '/assets/teams/1/dokini.webp';
-    import feedtheworld from '/assets/teams/1/feedtheworld.webp';
-    import flago from '/assets/teams/1/flago.webp';
-    import lebonplant from '/assets/teams/1/lebonplant.webp';
-    import monkeys from '/assets/teams/1/monkeys.webp';
-    import proximiam from '/assets/teams/1/proximiam.webp';
-    import restauck from '/assets/teams/1/restauck.webp';
-    import systemedx from '/assets/teams/1/systemeDX.webp';
-    import totallyspes from '/assets/teams/1/totallyspes.webp';
-    import treeflop from '/assets/teams/1/treeflop.webp';
-    import yedi from '/assets/teams/1/yedi.webp';
-    import bubble from '/assets/teams/1/bubbleteam.webp';
+    import cidoos from '/assets/teams/2/cidoos.png';
+    import crowsnews from '/assets/teams/2/crowsnews.png';
+    import gottagodance from '/assets/teams/2/gottagodance.png';
+    import gottafityou from '/assets/teams/2/gottafityou.png';
+    import lightcom from '/assets/teams/2/lightcom.png';
+    import moon from '/assets/teams/2/moon.png';
+    import ploutos from '/assets/teams/2/plutos.png';
+    import proxint from '/assets/teams/2/proxint.png';
+    import ratsdao from '/assets/teams/2/ratsdao.png';
+    import shopmaker from '/assets/teams/2/shopmaker.png';
+    import tutoalexa from '/assets/teams/2/tutoalexa.png';
+    import tutomath from '/assets/teams/2/tutomath.png';
+    import tutopres from '/assets/teams/2/tutopres.png';
+    import uroom from '/assets/teams/2/uroom.png';
 
+    
     import Moon from '/assets/teams/2/moonteam.jpg';
 
     import Anne from '/assets/juries/0/anne.webp';
-
     import Jury from '/assets/jury.svg';
 
     const projects = [
         {
-            image: yedi,
+            image: moon,
             name: "MOON - Equipe Moon",
             content: `
            Imaginez un avenir où les datacenters ne rejettent pas 12 milliards de tonnes de CO2 par an. 
@@ -38,7 +36,7 @@
            là où il reste encore tout à imaginer. Pour un cloud au-delà des nuages.`
         },
         {
-            image: yedi,
+            image: proxint,
             name: "Proxint - Equipe TooEmptyKay",
             content: `
             Les interconnexions possibles aujourd'hui nous permettent d’être en contact instantanément avec 
@@ -51,7 +49,7 @@
             `
         },
         {
-            image: yedi,
+            image: cidoos,
             name: "Cidoos - Equipe Cidoos",
             content: `
             Un jeu mobile avec des petits monstres, mais surtout une blockchain pour prévenir tout risque de 
@@ -62,7 +60,7 @@
             `
         },
         {
-            image: yedi,
+            image: gottagodance,
             name: "Gotta Go Dance - Equipe GottaGoDance",
             content: `
             Salut à toi jeune célibataire ! Tu en as marre des sites de rencontres qui fonctionnent comme des 
@@ -75,7 +73,7 @@
             `
         },
         {
-            image: yedi,
+            image: ploutos,
             name: "Ploutos - Equipe FARM",
             content: `
             Application proposant un bot tutoriel pour découvrir le monde de la crypto et du trading de manière 
@@ -85,7 +83,7 @@
             `
         },
         {
-            image: yedi,
+            image: shopmaker,
             name: "ShopMaker - Equipe Flying Bananas",
             content: `
             Le shopping de demain se situe dans le Metavers. Et si à la fin de votre partie Minecraft, vous 
@@ -95,7 +93,7 @@
             `
         },
         {
-            image: yedi,
+            image: ratsdao,
             name: " RatsDAO - Equipe H-Lfd'i",
             content: `
             Utiliser vos cryptos dans un objectif qui a du sens ? C’est ce que propose l’équipe H-Lfd’i 
@@ -104,7 +102,7 @@
             `
         },
         {
-            image: yedi,
+            image: uroom,
             name: "UROOM - Equipe Le Perroquet",
             content: `
             UROOM est un outil qui permet aux clients réguliers de chaine d’hôtel de conserver l’ensemble de 
@@ -113,7 +111,7 @@
             `
         },
         {
-            image: yedi,
+            image: lightcom,
             name: "LightCOM - Equipe LightCom",
             content: `
             40 minutes, c’est le temps qu’un automobiliste parisien passe par jour dans les bouchons. 
@@ -125,7 +123,7 @@
             `
         },
         {
-            image: yedi,
+            image: gottafityou,
             name: "Gotta Fit You - Equipe Piano",
             content: `
             Gotta Fit You c’est un jumeau numérique 3D qui vous permet de shopper en ligne tout en essayant 
@@ -136,7 +134,7 @@
 
         },
         {
-            image: yedi,
+            image: crowsnews,
             name: "Cross News - Equipe ShowPatate",
             content: `
             Les algorithmes de recommandation nous empêchent d’être informés de manière neutre en ligne. 
@@ -145,7 +143,7 @@
             la moins biaisée possible.`
         },
         {
-            image: yedi,
+            image: tutomath,
             name: "Parcours Tuto - Equipe PassTheButter",
             content: `
             La team PassTheButter a développé une application de reconnaissance vocale pour expressions 
@@ -155,7 +153,7 @@
 
         },
         {
-            image: yedi,
+            image: tutoalexa,
             name: "Parcours Tuto - Equipe WherePizza?",
             content: `
             La team WherePizza? a imaginé un assistant vocal pour les personnes ayant des difficultés à 
@@ -164,7 +162,7 @@
 
         },
         {
-            image: yedi,
+            image: tutopres,
             name: "Parcours Tuto - Equipe Le C c'est le meilleur",
             content: `
             La team Le C c’est le meilleur a imaginé une solution de génération de texte pour les présentations. 
