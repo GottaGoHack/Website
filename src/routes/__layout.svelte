@@ -16,10 +16,11 @@
         { label: 'Hackathon ?', route: '/hackathon' },
         { label: 'Actu', route: '/actu' },
         {
-            label: 'Archives',
+            label: 'Edition',
             subRoutes: [
                 { label: 'Hackathon #0', route: '/archives/0' },
-                { label: 'Hackathon #1', route: '/archives/1' }
+                { label: 'Hackathon #1', route: '/archives/1' },
+                { label: 'Hackathon #2', route: '/archives/2' }
             ]
         },
         { label: 'Contact', route: '#footer' }

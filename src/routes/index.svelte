@@ -130,7 +130,7 @@
                 <div class="date">13/14/15 mai 2022</div>
             </div>
             <div class="event-container">
-                <a class="event" href="https://www.helloasso.com/associations/gotta-go-hack/evenements/hackathon-gotta-go-hack-edition-2">S'INSCRIRE</a>
+                <a class="event" href="/archives/2">TOUT SAVOIR</a>
                 <div class="space"></div>
             </div>
         </div>
