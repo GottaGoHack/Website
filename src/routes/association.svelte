@@ -140,15 +140,6 @@ import { title } from '/app';
             `
         },
         {
-            name: 'Hugo Jacquel',
-            photo: Anonymous,
-            role: 'STAFF | Lyon',
-            description: `
-                Touche à tout et la main sur le coeur, Adrien, depuis sa 4L, est chargé de recruter les personnes
-                composant le jury de nos hackathon !
-            `
-        },
-        {
             name: 'Adrien Anton-Ludwig',
             photo: Adrien,
             role: 'STAFF | Paris',
