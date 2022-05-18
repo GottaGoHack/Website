@@ -23,7 +23,7 @@
     import ESME from '/assets/school/esme-logo.png';
 
 
-    const nextFrom = new Date(2022, 4, 13); // 0 = january, 11 = december (only months have this specificity)
+    const nextFrom = new Date(2022, 10, 13); // 0 = january, 11 = december (only months have this specificity)
     const nextTo = new Date(nextFrom);
     nextTo.setDate(nextTo.getDate() + 2);
 

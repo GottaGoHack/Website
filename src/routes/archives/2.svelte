@@ -225,7 +225,7 @@
 
 <div id="recap">
     <div class="lf">
-            <img class="photo" src={Moon} alt="GottaAgro"/>
+            <img class="photo" src={Moon} alt="Moon"/>
         <div class="description">[La team MOON, vainqueur du Hackathon #2]</div>
     </div>
 
@@ -273,7 +273,7 @@
 <div id="jury">
     <div id="sub-header">
         <div class="inner">
-            <h1 class="title">Le jury<br /> Gotta Go Hack edition #1</h1>
+            <h1 class="title">Le jury<br /> Gotta Go Hack edition #2</h1>
             <hr class="separator" />
         </div>
     </div>
