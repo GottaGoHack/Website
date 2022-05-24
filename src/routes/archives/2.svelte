@@ -52,12 +52,12 @@
             image: cidoos,
             name: "Cidoos - Equipe Cidoos",
             content: `
-            Un jeu mobile avec des petits monstres, mais surtout une blockchain pour prévenir tout risque de 
-            triche. L’application Cidoos permet aux joueurs d’attraper et de collectionner ces petits monstres 
-            sous forme de NFTs, et de les faire se battre ou se reproduire. Le jeu pousse également ses joueurs 
-            à marcher pour gagner plus de monnaie locale, le Cid, et ainsi faire évoluer leurs monstres.
-
-            `
+            Un jeu mobile avec des petits monstres, des Cidoos, sans aucune publicité! Ballades toi avec ton Cidoo 
+            dans la poche pour gagner de la cryptomonnaie! Bats toi contre d'autres joueurs et tente de gagner le 
+            Cidoo de l'adversaire ou risque de perdre le tien! 
+            `,
+            underline : `Rejoins-nous sur Twitter pour plus d'informations ! `,
+            url: `https://twitter.com/CidoosOfficial`
         },
         {
             image: gottagodance,
@@ -254,7 +254,7 @@
 </div>
 
 <div id="projects">
-    {#each projects as { image, name, content }, i}
+    {#each projects as { image, name, content, underline, url }, i}
         <div class="project">
             <img class="team" src={image} alt="Logo de {name}" />
             <div class="content">
@@ -265,6 +265,12 @@
                     {/if}
                 </div>
                 <div class="description">{content}</div>
+                {#if underline}
+                <div class="description">
+                    {underline}
+                    <a href={url}> => {url}</a>
+                </div>
+                {/if}
             </div>
         </div>
     {/each}
