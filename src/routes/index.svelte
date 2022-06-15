@@ -123,14 +123,20 @@
 <div id="header">
     <div class="left">
         <div class="inner">
+            <div>
+                <div class="stay">Stay tuned pour le</div>
+            </div>
+
             <h1>Hackathon</h1>
             <h1>Gotta Go Hack</h1> 
-            <h1>Edition #2</h1>
+            <h1>Edition #3</h1>
+
             <div>
-                <div class="date">13/14/15 mai 2022</div>
+                <div class="date">Novembre 2022 </div>
             </div>
+
             <div class="event-container">
-                <a class="event" href="/archives/2">TOUT SAVOIR</a>
+                <a class="event" href="https://forms.gle/dUzaHeQGGU85b7Zc9">Me tenir informé</a>
                 <div class="space"></div>
             </div>
         </div>
@@ -157,7 +163,7 @@
 </div>
 
 <div id="alaune">
-    <div class="title">LES + DE L'EDITION</div>
+    <div class="title">LES + DU HACKATHON GGH</div>
     <div class="infos">
             {#each first_info as { title, photo, description}, i}
             <div class="info">
@@ -190,7 +196,7 @@
 </div>
 
 <div id="novembre">
-    <a class="flickr" href="https://www.flickr.com/photos/club-ephemere/albums/72177720295591573">LA DERNIERE EDITION EN IMAGE</a>
+    <a class="flickr" href="https://www.flickr.com/photos/club-ephemere/albums/72177720299383429/with/52110271183/">LA DERNIERE EDITION EN IMAGE</a>
 </div>
 
 <div id="faq">
@@ -221,8 +227,14 @@
             .inner {
                 flex-direction: column;
 
-                .date {
+                .stay {
                     padding-top: 2vh;
+                    font-size: 3vw;
+                    @include colored(box-shadow, 0 -38px inset);
+                }
+
+                .date {
+                    padding-top: 6vh;
                     font-size: 3vw;
                     @include colored(box-shadow, 0 -38px inset);
                 }
@@ -230,7 +242,7 @@
 
             .event-container {
                 $border: solid white 3px;
-                margin-top: 15vh;
+                margin-top: 4vh;
 
                 .event {
                     padding: 20px 25px;

@@ -251,7 +251,7 @@ import { title } from '/app';
 </div>
 
 <div id="recrutement">
-    <a href="https://forms.office.com/r/FedcuQtKNt">Nous rejoindre</a>
+    <a href="https://forms.gle/9SkJiLBus98FcVbK9">Nous rejoindre</a>
 </div>
 
 <div id="ribbon"></div>
