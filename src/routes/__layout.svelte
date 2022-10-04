@@ -87,7 +87,7 @@
 
             <div id="staff">
                 <div class="member">Présidente - Jeanne Morin</div>
-                <div class="member">Vice-président - Mehdi Oueslati</div>
+                <div class="member">Vice-président - Ronan Pedron</div>
                 <div class="member">Trésorier - Alexandre Lemonnier</div>
                 <div class="member">Secrétaire - Tao Blancheton</div>
             </div>

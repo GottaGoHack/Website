@@ -32,12 +32,12 @@ import { title } from '/app';
             `
         },
         {
-            name: 'Mehdi Oueslati',
-            photo: Mehdi,
+            name: 'Ronan Pédron',
+            photo: Ronan,
             role: 'BURO | Vice président',
             description: `
-                Hackathonien récidiviste, avec des projets plus ou moins dans le thème, Mehdi est un peu notre
-                directeur artistique chez GGH. Mais surtout il offre toujours les pizzas, et ça c'est pas négligeable.
+                Toujours partant pour des projets délirants, vif d'esprit, Ronan est tellement rapide qu'il n'a pas eu
+                le temps d'écrire un seul mail pour la recherche de sponsor !
             `
         },
         {
@@ -59,12 +59,12 @@ import { title } from '/app';
             `
         },
         {
-            name: 'Ronan Pédron',
-            photo: Ronan,
+            name: 'Mehdi Oueslati',
+            photo: Mehdi,
             role: 'RE | Responsable Sponsor',
             description: `
-                Toujours partant pour des projets délirants, vif d'esprit, Ronan est tellement rapide qu'il n'a pas eu
-                le temps d'écrire un seul mail pour la recherche de sponsor !
+                Hackathonien récidiviste, avec des projets plus ou moins dans le thème, Mehdi est un peu notre
+                directeur artistique chez GGH. Mais surtout il offre toujours les pizzas, et ça c'est pas négligeable.
             `
         },
         {
