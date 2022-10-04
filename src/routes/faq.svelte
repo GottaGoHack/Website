@@ -22,7 +22,7 @@
         },
         {
             question: 'Quelles sont les dates du prochain Hackathon ?',
-            answer: 'La Spring Edition du hackathon Gotta Go Hack se déroulera du 13 au 15 mai 2022'
+            answer: 'La Winter Edition 2022 du hackathon Gotta Go Hack se déroulera du 18 au 20 novembre 2022'
         },
         {
             question: 'Combien de temps dure le Hackathon ?',
@@ -30,22 +30,22 @@
         },
         {
             question: 'Où a lieu le Hackathon ?',
-            answer: 'La Spring Edition 2022 du Hackathon Gotta Go Hack se déroulera en présentiel sur les campus de l\'EPITA Paris et Lyon. Les participations en distanciel pour les élèves à l\'étranger ou en incapacité de se déplacer vers un centre présentiel sont également possibles.'
+            answer: 'La Winter Edition 2022 du Hackathon Gotta Go Hack se déroulera en présentiel sur les campus de l\'EPITA Paris.'
         }
     ];
 
     const inscription_question = [
         {
             question: 'Comment s\'inscrire au prochain Hackathon ?',
-            answer: 'Les inscriptions s\'ouvriront 1 mois avant l\'évènement, à travers un formulaire d\'inscription partagé sur nos réseaux et notre site web.'
+            answer: 'Les inscriptions s\'ouvriront le 17 octobre, à travers un formulaire d\'inscription partagé sur nos réseaux et notre site web.'
         },
         {
             question: 'Qui peut s\'inscrire ?',
-            answer: 'Les étudiants de toutes écoles peuvent s\'inscrire au Hackathon.'
+            answer: 'Les étudiants de toutes écoles informatiques ou ingénieurs peuvent s\'inscrire au Hackathon.'
         },
         {
             question: 'Combien coûte l\'inscription ?',
-            answer: 'Pour les élèves du groupe IONIS, Lors de l\'inscription seule une caution sera demandé. Cette dernière sera rendu si le participant se rend bien au Hackathon.'
+            answer: 'L\'inscription est totalement gratuite !'
         },
         {
             question: 'Comment s\'inscrire en équipe au Hackathon ?',

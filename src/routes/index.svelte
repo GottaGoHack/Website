@@ -23,7 +23,7 @@
     import ESME from '/assets/school/esme-logo.png';
 
 
-    const nextFrom = new Date(2022, 10, 13); // 0 = january, 11 = december (only months have this specificity)
+    const nextFrom = new Date(2022, 10, 18); // 0 = january, 11 = december (only months have this specificity)
     const nextTo = new Date(nextFrom);
     nextTo.setDate(nextTo.getDate() + 2);
 
@@ -92,6 +92,12 @@
         }
     ]
 
+    const carroussel = [
+        {
+            url: 'https://live.staticflickr.com/65535/52110481219_316b8abf31_k.jpg'
+        }
+    ]
+
     const bonus = [
         {
             title: 'Nourriture fournie',
@@ -123,20 +129,17 @@
 <div id="header">
     <div class="left">
         <div class="inner">
-            <div>
-                <div class="stay">Stay tuned pour le</div>
-            </div>
 
             <h1>Hackathon</h1>
             <h1>Gotta Go Hack</h1> 
             <h1>Edition #3</h1>
 
             <div>
-                <div class="date">Novembre 2022 </div>
+                <div class="date">18 au 20 nov 2022 </div>
             </div>
 
             <div class="event-container">
-                <a class="event" href="https://forms.gle/dUzaHeQGGU85b7Zc9">Me tenir informé</a>
+                <a class="event" href="">Inscription le 17 oct</a>
                 <div class="space"></div>
             </div>
         </div>
@@ -175,25 +178,6 @@
     </div>
 </div>
 
-<div id="carroussel">
-    {#each school as photo, i}
-    <div class="images">
-        <img class="photo" src={photo} alt="" height="60vw"/>
-    </div>
-    {/each}
-</div>
-
-<div class="subtitle">LES VILLES HÔTES</div>
-<div id="secondinfo">
-    <div class="infos">
-            {#each villes as { title, photo, description}, i}
-            <div class="info">
-            <img class="photo" src={photo} alt=""/>
-            <div class="subject">{title}</div>
-            </div>
-            {/each}
-    </div>
-</div>
 
 <div id="novembre">
     <a class="flickr" href="https://www.flickr.com/photos/club-ephemere/albums/72177720299383429/with/52110271183/">LA DERNIERE EDITION EN IMAGE</a>
