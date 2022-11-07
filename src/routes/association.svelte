@@ -264,7 +264,7 @@ import { title } from '/app';
 
     #header {
         position: relative;
-
+        background-color: $color-blue;
         height: calc(100vh - #{$nav-height});
 
         .left, .right {

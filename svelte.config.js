@@ -13,6 +13,10 @@ const config = {
         default: true
     },
     vite: () => ({
+      optimizeDeps: {
+        include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+      },
+
       resolve: {
         alias: {
           // The 'replace' values in the preprocess options should work when using /components, but for

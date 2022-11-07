@@ -65,6 +65,7 @@
 
   #header {
     position: relative;
+    background-color: $color-blue;
 
     .left {
       flex: 0.5;

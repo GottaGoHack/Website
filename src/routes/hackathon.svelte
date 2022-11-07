@@ -42,6 +42,7 @@
 <svelte:head>
     <title>{title('Hackathon ?')}</title>
 </svelte:head>
+<div id="top"></div>
 
 <div id="header">
     <div class="left">
@@ -54,24 +55,14 @@
         </div>
     </div>
     <div class="right">
-        <div class="title">Mais qu'est-ce que c'est quoi dis donc un Hackathon ?</div>
-
             <div class="content">
                 <p>
-                    C'est un évènement qui réunit pendant un <span class="bold">weekend des étudiants</span>, par
-                    groupe, pour essayer d'imaginer et de prototyper un <span class="bold">projet innovant</span>.
-                    L'objectif est d'aboutir au meilleur résultat possible dans le lapse de temps accordé, en répondant
-                    à des problématiques données, et tout ça évalué par des professionnels.
+                    Rien à voir avec du Hacking et des CTF ! Un Hackathon, c’est une compétition de 
+                    projets technologiques et entrepreneuriaux par équipe de 4 qui se déroule sur 48h. 
+                    Autour d’un thème, toi et ta team aurez tout le week-end pour imaginer un projet 
+                    innovant et réaliser son prototype mais aussi son business plan ! 
                 </p>
-            <p>
-                    L'innovation est un muscle, qu'il faut entraîner ! Le but de l'Association Gotta Go Hack est donc de
-                    proposer des programmes de musculation innovante aux élèves d'EPITA, notamment à travers des
-                    Hackathons ! A plus long terme, le projet de l'association est d'organiser un Hackathon de référence
-                    dans le paysage de la tech français et de contribuer à faire croître le nombre d'évènements de ce
-                    type dans notre pays. Notre rêve : que les hackathons soient incontournables dans toutes les écoles
-                    d'ingénieurs françaises d'ici 5 à 10 ans.
-            
-            </p>
+                <p>L’objectif avant la présentation devant le jury : avoir un projet qui pourrait devenir une vraie startup.</p>
             </div>
     </div>
 </div>
@@ -103,6 +94,11 @@
 
 <style lang="scss">
     @import 'vars';
+
+    #top {
+        background-color: white;
+
+    }
 
     #header {
         height: calc(100vh - #{$nav-height});
@@ -163,11 +159,12 @@
 
             .content {
                 flex-direction: column;
-                font-size: 1vw;
+                font-size: 20px;
+                max-width: 600px;
 
 
                 p {
-                    padding-top: 2vh;
+                    padding-top: 20px;
 
                     .bold {
                         font-weight: bold;
