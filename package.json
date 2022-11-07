@@ -13,13 +13,10 @@
     "svelte-carousel": "^1.0.20"
   },
   "devDependencies": {
-    "@beyonk/svelte-carousel": "^2.9.0",
     "@sveltejs/kit": "next",
     "mdsvex": "^0.9.8",
     "sass": "^1.49.9",
     "svelte": "^3.46.4",
-    "svelte-feather-icons": "^4.0.0",
-    "svelte-preprocess": "^4.10.4",
-    "svelte-swipe": "^1.8.2"
+    "svelte-preprocess": "^4.10.4"
   }
 }

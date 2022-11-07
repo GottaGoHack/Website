@@ -13,9 +13,6 @@ const config = {
         default: true
     },
     vite: () => ({
-      optimizeDeps: {
-        include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
-      },
 
       resolve: {
         alias: {
