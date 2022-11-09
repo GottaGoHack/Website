@@ -10,7 +10,8 @@
   "dependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.29",
     "normalizecss": "^3.0.0",
-    "svelte-carousel": "^1.0.20"
+    "svelte-carousel": "^1.0.20",
+    "vite": "^3.2.3"
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
