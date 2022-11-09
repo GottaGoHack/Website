@@ -13,7 +13,6 @@ const config = {
         default: true
     },
     vite: () => ({
-
       resolve: {
         alias: {
           // The 'replace' values in the preprocess options should work when using /components, but for
